@@ -845,6 +845,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -2273,6 +2412,18 @@
 		)
 	)
 	(junction
+		(at 104.14 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e2effd6-d2cf-4ded-9c12-5b25469de790")
+	)
+	(junction
+		(at 104.14 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60572a94-d8ba-4eed-a45a-0f42c436e91d")
+	)
+	(junction
 		(at 220.98 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2446,7 +2597,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 95.25) (xy 124.46 95.25)
+			(xy 90.17 95.25) (xy 104.14 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2516,6 +2667,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 82.55) (xy 90.17 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46869b75-5fb7-4626-b388-e0c67b135b77")
+	)
+	(wire
+		(pts
 			(xy 78.74 78.74) (xy 80.01 78.74)
 		)
 		(stroke
@@ -2546,7 +2707,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 93.98) (xy 101.6 95.25)
+			(xy 90.17 93.98) (xy 90.17 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2636,7 +2797,27 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 82.55) (xy 101.6 83.82)
+			(xy 104.14 95.25) (xy 124.46 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "936fd9b4-5b32-469f-bd9e-d565ba0915f1")
+	)
+	(wire
+		(pts
+			(xy 104.14 82.55) (xy 104.14 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93b7c44f-1c51-46af-b331-7fcd91f88583")
+	)
+	(wire
+		(pts
+			(xy 90.17 82.55) (xy 90.17 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2663,6 +2844,16 @@
 			(type default)
 		)
 		(uuid "99392c4a-a241-44e5-be55-65acdbf8d4ca")
+	)
+	(wire
+		(pts
+			(xy 104.14 92.71) (xy 104.14 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0e36dcf-ff35-4c81-a2f1-8dd5b6912f29")
 	)
 	(wire
 		(pts
@@ -2796,7 +2987,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 82.55) (xy 101.6 82.55)
+			(xy 106.68 82.55) (xy 104.14 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3280,6 +3471,76 @@
 			(project "Awtr"
 				(path "/a526cc2a-2896-44f6-895f-0822ab62eb25"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 104.14 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21376985-10a4-4da2-b6e8-6ccdf4a0ab4e")
+		(property "Reference" "C1"
+			(at 107.95 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10pF"
+			(at 107.95 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 105.1052 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 104.14 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1658ca11-7fa0-4d62-8963-4d351e7a02c4")
+		)
+		(pin "2"
+			(uuid "155f6466-eaf9-4236-a74c-51ec74192aa4")
+		)
+		(instances
+			(project ""
+				(path "/a526cc2a-2896-44f6-895f-0822ab62eb25"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4289,7 +4550,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 101.6 88.9 90)
+		(at 90.17 88.9 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4298,7 +4559,7 @@
 		(fields_autoplaced yes)
 		(uuid "ee17a260-8709-4561-9978-f590084c6c03")
 		(property "Reference" "SW1"
-			(at 102.87 87.6299 90)
+			(at 91.44 87.6299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4307,7 +4568,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 102.87 90.1699 90)
+			(at 91.44 90.1699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4316,7 +4577,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_Push_1TS009xxxx-xxxx-xxxx_6x6x5mm"
-			(at 96.52 88.9 0)
+			(at 85.09 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4325,7 +4586,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 96.52 88.9 0)
+			(at 85.09 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4334,7 +4595,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 101.6 88.9 0)
+			(at 90.17 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)

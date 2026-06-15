@@ -49,6 +49,7 @@ enum {utx_pin = 6};
 
 #define SENS_PORT GPIOA
 #define SENS_GPIN IO_P2
+#define SENS_ADC_CHANNEL 0
 enum {sens_pin = 2};
 
 /* LED, pump and button */

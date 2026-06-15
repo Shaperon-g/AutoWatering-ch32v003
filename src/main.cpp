@@ -91,6 +91,12 @@ void SystemInit() {
 	AFIO->PCFR1 |= UTX_REMAP;
 
 	/*ADC*/
+	ADC1->CTLR1 |= 0;  //Single single-channel mode
+	ADC1->CTLR2 |= ADC_ALIGN | ADC_ADON;
+	ADC1->SAMPTR2 = 0;
+	ADC1->RSQR1 = 0;
+	ADC1->RSQR2 = 0;
+	ADC1->RSQR3 = SENS_ADC_CHANNEL << 0;
 
 	/* RCC end*/
 	delayT(MS_TO_TICKS(5000 * 8)); //for program chip (~ 5 sec)

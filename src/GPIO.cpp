@@ -21,5 +21,11 @@ uint8_t btn_state() { // 1 - pressed, 0 - not
 }
 
 uint16_t sens_get() {
-    return 100;
+    if(!(ADC1->CTLR2 & ADC_ADON)) {
+        ADC1->CTLR2 |= ADC_ADON;
+    }
+    ADC1->CTLR2 |= ADC_ADON;
+    while(!(ADC1->STATR & ADC_EOC)) {;}
+
+    return ADC1->RDATAR >> 8;
 }
