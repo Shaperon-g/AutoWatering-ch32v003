@@ -1,0 +1,280 @@
+GAS LISTING /tmp/ccyGj5EI.s 			page 1
+
+
+   1              		.file	"GPIO.cpp"
+   2              		.option nopic
+   3              		.attribute arch, "rv32e1p9_c2p0_zicsr"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 4
+   6              		.text
+   7              	.Ltext0:
+   8              		.file 0 "/home/ignat/projects/AutoWatering" "src/GPIO.cpp"
+   9              		.section	.text._Z6led_onv,"ax",@progbits
+  10              		.align	1
+  11              		.globl	_Z6led_onv
+  13              	_Z6led_onv:
+  14              	.LFB15:
+  15              		.file 1 "src/GPIO.cpp"
+   1:src/GPIO.cpp  **** #include "GPIO.h"
+   2:src/GPIO.cpp  **** 
+   3:src/GPIO.cpp  **** 
+   4:src/GPIO.cpp  **** void led_on(){
+  16              		.loc 1 4 14
+  17              		.cfi_startproc
+   5:src/GPIO.cpp  ****     LED_PORT->BCR = 1 << led_pin;
+  18              		.loc 1 5 5
+  19              		.loc 1 5 19 is_stmt 0
+  20 0000 B7170140 		li	a5,1073811456
+  21 0004 0947     		li	a4,2
+  22 0006 D8CB     		sw	a4,20(a5)
+   6:src/GPIO.cpp  **** }
+  23              		.loc 1 6 1
+  24 0008 8280     		ret
+  25              		.cfi_endproc
+  26              	.LFE15:
+  28              		.section	.text._Z7led_offv,"ax",@progbits
+  29              		.align	1
+  30              		.globl	_Z7led_offv
+  32              	_Z7led_offv:
+  33              	.LFB16:
+   7:src/GPIO.cpp  **** void led_off(){
+  34              		.loc 1 7 15 is_stmt 1
+  35              		.cfi_startproc
+   8:src/GPIO.cpp  ****     LED_PORT->BSHR = 1 << led_pin;
+  36              		.loc 1 8 5
+  37              		.loc 1 8 20 is_stmt 0
+  38 0000 B7170140 		li	a5,1073811456
+  39 0004 0947     		li	a4,2
+  40 0006 98CB     		sw	a4,16(a5)
+   9:src/GPIO.cpp  **** }
+  41              		.loc 1 9 1
+  42 0008 8280     		ret
+  43              		.cfi_endproc
+  44              	.LFE16:
+  46              		.section	.text._Z7pump_onv,"ax",@progbits
+  47              		.align	1
+  48              		.globl	_Z7pump_onv
+  50              	_Z7pump_onv:
+  51              	.LFB17:
+  10:src/GPIO.cpp  **** void pump_on(){
+  52              		.loc 1 10 15 is_stmt 1
+GAS LISTING /tmp/ccyGj5EI.s 			page 2
+
+
+  53              		.cfi_startproc
+  11:src/GPIO.cpp  ****     PUMP_PORT->BSHR = 1 << pump_pin;
+  54              		.loc 1 11 5
+  55              		.loc 1 11 21 is_stmt 0
+  56 0000 B7170140 		li	a5,1073811456
+  57 0004 1147     		li	a4,4
+  58 0006 98CB     		sw	a4,16(a5)
+  12:src/GPIO.cpp  **** }
+  59              		.loc 1 12 1
+  60 0008 8280     		ret
+  61              		.cfi_endproc
+  62              	.LFE17:
+  64              		.section	.text._Z8pump_offv,"ax",@progbits
+  65              		.align	1
+  66              		.globl	_Z8pump_offv
+  68              	_Z8pump_offv:
+  69              	.LFB18:
+  13:src/GPIO.cpp  **** void pump_off(){
+  70              		.loc 1 13 16 is_stmt 1
+  71              		.cfi_startproc
+  14:src/GPIO.cpp  ****     PUMP_PORT->BCR = 1 << pump_pin;
+  72              		.loc 1 14 5
+  73              		.loc 1 14 20 is_stmt 0
+  74 0000 B7170140 		li	a5,1073811456
+  75 0004 1147     		li	a4,4
+  76 0006 D8CB     		sw	a4,20(a5)
+  15:src/GPIO.cpp  **** }
+  77              		.loc 1 15 1
+  78 0008 8280     		ret
+  79              		.cfi_endproc
+  80              	.LFE18:
+  82              		.section	.text._Z9btn_statev,"ax",@progbits
+  83              		.align	1
+  84              		.globl	_Z9btn_statev
+  86              	_Z9btn_statev:
+  87              	.LFB19:
+  16:src/GPIO.cpp  **** uint8_t btn_state() { // 1 - pressed, 0 - not
+  88              		.loc 1 16 21 is_stmt 1
+  89              		.cfi_startproc
+  17:src/GPIO.cpp  ****     if(BTN_PORT->INDR & (1 << btn_pin)) {
+  90              		.loc 1 17 5
+  91              		.loc 1 17 18 is_stmt 0
+  92 0000 B7170140 		li	a5,1073811456
+  93 0004 8847     		lw	a0,8(a5)
+  94              		.loc 1 17 5
+  95 0006 1181     		srli	a0,a0,4
+  96 0008 13451500 		xori	a0,a0,1
+  18:src/GPIO.cpp  ****         return 0;
+  19:src/GPIO.cpp  ****     }
+  20:src/GPIO.cpp  ****     return 1;
+  21:src/GPIO.cpp  **** }
+  97              		.loc 1 21 1
+  98 000c 0589     		andi	a0,a0,1
+  99 000e 8280     		ret
+ 100              		.cfi_endproc
+ 101              	.LFE19:
+ 103              		.section	.text._Z8sens_getv,"ax",@progbits
+GAS LISTING /tmp/ccyGj5EI.s 			page 3
+
+
+ 104              		.align	1
+ 105              		.globl	_Z8sens_getv
+ 107              	_Z8sens_getv:
+ 108              	.LFB20:
+  22:src/GPIO.cpp  **** 
+  23:src/GPIO.cpp  **** uint16_t sens_get() {
+ 109              		.loc 1 23 21 is_stmt 1
+ 110              		.cfi_startproc
+  24:src/GPIO.cpp  ****     return 100;
+ 111              		.loc 1 24 5
+  25:src/GPIO.cpp  **** }...
+ 112              		.loc 1 25 1 is_stmt 0
+ 113 0000 13054006 		li	a0,100
+ 114 0004 8280     		ret
+ 115              		.cfi_endproc
+ 116              	.LFE20:
+ 118              		.text
+ 119              	.Letext0:
+ 120              		.file 2 "/opt/MRS_toolchain/riscv-wch-elf/include/machine/_default_types.h"
+ 121              		.file 3 "/opt/MRS_toolchain/riscv-wch-elf/include/sys/_stdint.h"
+ 122              		.file 4 "src/core/ch32v00x.h"
+ 123              		.file 5 "src/GPIO.h"
+GAS LISTING /tmp/ccyGj5EI.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 GPIO.cpp
+     /tmp/ccyGj5EI.s:13     .text._Z6led_onv:0000000000000000 _Z6led_onv
+     /tmp/ccyGj5EI.s:17     .text._Z6led_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:18     .text._Z6led_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:19     .text._Z6led_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:20     .text._Z6led_onv:0000000000000000 $x
+     /tmp/ccyGj5EI.s:20     .text._Z6led_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:24     .text._Z6led_onv:0000000000000008 .L0 
+     /tmp/ccyGj5EI.s:25     .text._Z6led_onv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:32     .text._Z7led_offv:0000000000000000 _Z7led_offv
+     /tmp/ccyGj5EI.s:35     .text._Z7led_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:36     .text._Z7led_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:37     .text._Z7led_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:38     .text._Z7led_offv:0000000000000000 $x
+     /tmp/ccyGj5EI.s:38     .text._Z7led_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:42     .text._Z7led_offv:0000000000000008 .L0 
+     /tmp/ccyGj5EI.s:43     .text._Z7led_offv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:50     .text._Z7pump_onv:0000000000000000 _Z7pump_onv
+     /tmp/ccyGj5EI.s:53     .text._Z7pump_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:54     .text._Z7pump_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:55     .text._Z7pump_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:56     .text._Z7pump_onv:0000000000000000 $x
+     /tmp/ccyGj5EI.s:56     .text._Z7pump_onv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:60     .text._Z7pump_onv:0000000000000008 .L0 
+     /tmp/ccyGj5EI.s:61     .text._Z7pump_onv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:68     .text._Z8pump_offv:0000000000000000 _Z8pump_offv
+     /tmp/ccyGj5EI.s:71     .text._Z8pump_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:72     .text._Z8pump_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:73     .text._Z8pump_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:74     .text._Z8pump_offv:0000000000000000 $x
+     /tmp/ccyGj5EI.s:74     .text._Z8pump_offv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:78     .text._Z8pump_offv:0000000000000008 .L0 
+     /tmp/ccyGj5EI.s:79     .text._Z8pump_offv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:86     .text._Z9btn_statev:0000000000000000 _Z9btn_statev
+     /tmp/ccyGj5EI.s:89     .text._Z9btn_statev:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:90     .text._Z9btn_statev:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:91     .text._Z9btn_statev:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:92     .text._Z9btn_statev:0000000000000000 $x
+     /tmp/ccyGj5EI.s:92     .text._Z9btn_statev:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:95     .text._Z9btn_statev:0000000000000006 .L0 
+     /tmp/ccyGj5EI.s:98     .text._Z9btn_statev:000000000000000c .L0 
+     /tmp/ccyGj5EI.s:100    .text._Z9btn_statev:0000000000000010 .L0 
+     /tmp/ccyGj5EI.s:107    .text._Z8sens_getv:0000000000000000 _Z8sens_getv
+     /tmp/ccyGj5EI.s:110    .text._Z8sens_getv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:111    .text._Z8sens_getv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:112    .text._Z8sens_getv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:113    .text._Z8sens_getv:0000000000000000 $x
+     /tmp/ccyGj5EI.s:113    .text._Z8sens_getv:0000000000000000 .L0 
+     /tmp/ccyGj5EI.s:115    .text._Z8sens_getv:0000000000000006 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:000000000000002f .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:0000000000000051 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:0000000000000055 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:0000000000000086 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000b3 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000bc .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000c5 .L0 
+GAS LISTING /tmp/ccyGj5EI.s 			page 5
+
+
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000ce .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000df .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000e9 .L0 
+     /tmp/ccyGj5EI.s:688    .debug_line_str:00000000000000f4 .L0 
+     /tmp/ccyGj5EI.s:28     .text._Z6led_onv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:46     .text._Z7led_offv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:64     .text._Z7pump_onv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:82     .text._Z8pump_offv:000000000000000a .L0 
+     /tmp/ccyGj5EI.s:103    .text._Z9btn_statev:0000000000000010 .L0 
+     /tmp/ccyGj5EI.s:118    .text._Z8sens_getv:0000000000000006 .L0 
+     /tmp/ccyGj5EI.s:346    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccyGj5EI.s:609    .debug_str:000000000000000f .LASF39
+     /tmp/ccyGj5EI.s:686    .debug_line_str:0000000000000022 .LASF0
+     /tmp/ccyGj5EI.s:684    .debug_line_str:0000000000000000 .LASF1
+     /tmp/ccyGj5EI.s:581    .debug_rnglists:000000000000000c .LLRL0
+     /tmp/ccyGj5EI.s:603    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccyGj5EI.s:645    .debug_str:0000000000000141 .LASF2
+     /tmp/ccyGj5EI.s:679    .debug_str:00000000000001fc .LASF3
+     /tmp/ccyGj5EI.s:607    .debug_str:0000000000000005 .LASF6
+     /tmp/ccyGj5EI.s:617    .debug_str:00000000000000a9 .LASF4
+     /tmp/ccyGj5EI.s:665    .debug_str:00000000000001b5 .LASF5
+     /tmp/ccyGj5EI.s:667    .debug_str:00000000000001bf .LASF7
+     /tmp/ccyGj5EI.s:627    .debug_str:00000000000000e4 .LASF8
+     /tmp/ccyGj5EI.s:677    .debug_str:00000000000001f3 .LASF9
+     /tmp/ccyGj5EI.s:639    .debug_str:0000000000000129 .LASF10
+     /tmp/ccyGj5EI.s:625    .debug_str:00000000000000d2 .LASF11
+     /tmp/ccyGj5EI.s:657    .debug_str:0000000000000187 .LASF12
+     /tmp/ccyGj5EI.s:649    .debug_str:000000000000015b .LASF13
+     /tmp/ccyGj5EI.s:651    .debug_str:0000000000000172 .LASF14
+     /tmp/ccyGj5EI.s:669    .debug_str:00000000000001ca .LASF15
+     /tmp/ccyGj5EI.s:675    .debug_str:00000000000001ea .LASF16
+     /tmp/ccyGj5EI.s:633    .debug_str:000000000000010a .LASF40
+     /tmp/ccyGj5EI.s:631    .debug_str:0000000000000104 .LASF17
+     /tmp/ccyGj5EI.s:611    .debug_str:0000000000000091 .LASF18
+     /tmp/ccyGj5EI.s:643    .debug_str:000000000000013c .LASF19
+     /tmp/ccyGj5EI.s:615    .debug_str:00000000000000a3 .LASF20
+     /tmp/ccyGj5EI.s:653    .debug_str:000000000000017a .LASF21
+     /tmp/ccyGj5EI.s:605    .debug_str:0000000000000000 .LASF22
+     /tmp/ccyGj5EI.s:647    .debug_str:000000000000014e .LASF23
+     /tmp/ccyGj5EI.s:619    .debug_str:00000000000000b7 .LASF24
+     /tmp/ccyGj5EI.s:659    .debug_str:0000000000000195 .LASF25
+     /tmp/ccyGj5EI.s:641    .debug_str:0000000000000134 .LASF26
+     /tmp/ccyGj5EI.s:637    .debug_str:0000000000000120 .LASF27
+     /tmp/ccyGj5EI.s:629    .debug_str:00000000000000f7 .LASF29
+     /tmp/ccyGj5EI.s:108    .text._Z8sens_getv:0000000000000000 .LFB20
+     /tmp/ccyGj5EI.s:116    .text._Z8sens_getv:0000000000000006 .LFE20
+     /tmp/ccyGj5EI.s:673    .debug_str:00000000000001e0 .LASF28
+     /tmp/ccyGj5EI.s:663    .debug_str:00000000000001a7 .LASF30
+     /tmp/ccyGj5EI.s:87     .text._Z9btn_statev:0000000000000000 .LFB19
+     /tmp/ccyGj5EI.s:101    .text._Z9btn_statev:0000000000000010 .LFE19
+     /tmp/ccyGj5EI.s:661    .debug_str:000000000000019e .LASF31
+     /tmp/ccyGj5EI.s:671    .debug_str:00000000000001d3 .LASF33
+     /tmp/ccyGj5EI.s:69     .text._Z8pump_offv:0000000000000000 .LFB18
+     /tmp/ccyGj5EI.s:80     .text._Z8pump_offv:000000000000000a .LFE18
+     /tmp/ccyGj5EI.s:655    .debug_str:000000000000017f .LASF32
+     /tmp/ccyGj5EI.s:681    .debug_str:0000000000000208 .LASF34
+     /tmp/ccyGj5EI.s:51     .text._Z7pump_onv:0000000000000000 .LFB17
+GAS LISTING /tmp/ccyGj5EI.s 			page 6
+
+
+     /tmp/ccyGj5EI.s:62     .text._Z7pump_onv:000000000000000a .LFE17
+     /tmp/ccyGj5EI.s:621    .debug_str:00000000000000bf .LASF35
+     /tmp/ccyGj5EI.s:613    .debug_str:0000000000000097 .LASF36
+     /tmp/ccyGj5EI.s:33     .text._Z7led_offv:0000000000000000 .LFB16
+     /tmp/ccyGj5EI.s:44     .text._Z7led_offv:000000000000000a .LFE16
+     /tmp/ccyGj5EI.s:635    .debug_str:0000000000000119 .LASF37
+     /tmp/ccyGj5EI.s:623    .debug_str:00000000000000c7 .LASF38
+     /tmp/ccyGj5EI.s:14     .text._Z6led_onv:0000000000000000 .LFB15
+     /tmp/ccyGj5EI.s:26     .text._Z6led_onv:000000000000000a .LFE15
+     /tmp/ccyGj5EI.s:125    .debug_info:0000000000000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS

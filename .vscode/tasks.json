@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "type": "shell",
+          "label": "build",
+          "group": "build",
+          "dependsOn": "Make: build",
+          "command": "make",
+      },
+      {
+          "type": "shell",
+          "label": "load",
+          "group": "build",
+          "dependsOn": "Make: build",
+          "command": "make load",
+      },
+      {
+          "type": "shell",
+          "label": "clean",
+          "group": "build",
+          "dependsOn": "Make: build",
+          "command": "make clean",
+      }
+  ],
+  "inputs": [
+      {
+        "id": "workspaceFolderForwardSlash",
+        "type": "command",
+        "command": "extension.commandvariable.transform",
+        "args": {
+          "text": "${workspaceFolder}",
+          "find": "\\\\",
+          "replace": "/",
+          "flags": "g"
+        }
+      }
+    ]
+}
