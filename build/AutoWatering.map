@@ -73,10 +73,8 @@ Discarded input sections
                 0x0000000000000000       0x22 build//main.o
  .text._Z6delayTm
                 0x0000000000000000       0x1a build//main.o
- .text._Z6ob_getv
-                0x0000000000000000        0x4 build//main.o
- .text._Z6ob_seth
-                0x0000000000000000        0x2 build//main.o
+ .text._Z9flash_getv
+                0x0000000000000000        0xa build//main.o
  .rodata.SysTick_IRQHandler.str1.4
                 0x0000000000000000        0xe build//main.o
  .text.SysTick_IRQHandler
@@ -151,7 +149,7 @@ END GROUP
  *fill*         0x000000000000009e        0x2 
                 0x00000000000000a0                _einit = .
 
-.text           0x00000000000000a0      0xae4
+.text           0x00000000000000a0      0xbfc
                 0x00000000000000a0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000000000a0       0x7e /opt/MRS_toolchain/bin/../lib/gcc/riscv-wch-elf/12.2.0/rv32ec/ilp32e/libgcc.a(div.o)
@@ -164,127 +162,130 @@ END GROUP
  .text._Z10intToASCIIiPhh
                 0x000000000000011e       0x98 build//main.o
                 0x000000000000011e                intToASCII(int, unsigned char*, unsigned char)
+ .text._Z10flash_saveh
+                0x00000000000001b6       0xe8 build//main.o
+                0x00000000000001b6                flash_save(unsigned char)
  .text.SystemInit
-                0x00000000000001b6      0x17e build//main.o
-                0x00000000000001b6                SystemInit
+                0x000000000000029e      0x17e build//main.o
+                0x000000000000029e                SystemInit
  .text.startup.main
-                0x0000000000000334      0x22a build//main.o
-                0x0000000000000334                main
+                0x000000000000041c      0x258 build//main.o
+                0x000000000000041c                main
  .text.USART1_IRQHandler
-                0x000000000000055e        0xe build//main.o
-                0x000000000000055e                USART1_IRQHandler
+                0x0000000000000674        0xe build//main.o
+                0x0000000000000674                USART1_IRQHandler
  .text.EXTI7_0_IRQHandler
-                0x000000000000056c       0xbe build//main.o
-                0x000000000000056c                EXTI7_0_IRQHandler
+                0x0000000000000682       0xbe build//main.o
+                0x0000000000000682                EXTI7_0_IRQHandler
  .text.HardFault_Handler
-                0x000000000000062a        0x4 build//main.o
-                0x000000000000062a                HardFault_Handler
+                0x0000000000000740        0x4 build//main.o
+                0x0000000000000740                HardFault_Handler
  .text.startup._GLOBAL__sub_I__Z10hexToASCIIPKhhPh
-                0x000000000000062e       0x24 build//main.o
+                0x0000000000000744       0x24 build//main.o
  .text._Z6led_onv
-                0x0000000000000652        0xa build//GPIO.o
-                0x0000000000000652                led_on()
+                0x0000000000000768        0xa build//GPIO.o
+                0x0000000000000768                led_on()
  .text._Z7led_offv
-                0x000000000000065c        0xa build//GPIO.o
-                0x000000000000065c                led_off()
+                0x0000000000000772        0xa build//GPIO.o
+                0x0000000000000772                led_off()
  .text._Z7pump_onv
-                0x0000000000000666        0xa build//GPIO.o
-                0x0000000000000666                pump_on()
+                0x000000000000077c        0xa build//GPIO.o
+                0x000000000000077c                pump_on()
  .text._Z8pump_offv
-                0x0000000000000670        0xa build//GPIO.o
-                0x0000000000000670                pump_off()
+                0x0000000000000786        0xa build//GPIO.o
+                0x0000000000000786                pump_off()
  .text._Z9btn_statev
-                0x000000000000067a       0x10 build//GPIO.o
-                0x000000000000067a                btn_state()
+                0x0000000000000790       0x10 build//GPIO.o
+                0x0000000000000790                btn_state()
  .text._Z8sens_getv
-                0x000000000000068a       0x40 build//GPIO.o
-                0x000000000000068a                sens_get()
+                0x00000000000007a0       0x40 build//GPIO.o
+                0x00000000000007a0                sens_get()
  .text._ZN4uartC2EP13USART_TypeDefii9u_stopbit9u_wordlen
-                0x00000000000006ca       0x72 build//uart.o
-                0x00000000000006ca                uart::uart(USART_TypeDef*, int, int, u_stopbit, u_wordlen)
-                0x00000000000006ca                uart::uart(USART_TypeDef*, int, int, u_stopbit, u_wordlen)
+                0x00000000000007e0       0x74 build//uart.o
+                0x00000000000007e0                uart::uart(USART_TypeDef*, int, int, u_stopbit, u_wordlen)
+                0x00000000000007e0                uart::uart(USART_TypeDef*, int, int, u_stopbit, u_wordlen)
  .text._ZN4uart4sendEPhtPFvvEh
-                0x000000000000073c       0x8e build//uart.o
-                0x000000000000073c                uart::send(unsigned char*, unsigned short, void (*)(), unsigned char)
+                0x0000000000000854       0x8e build//uart.o
+                0x0000000000000854                uart::send(unsigned char*, unsigned short, void (*)(), unsigned char)
  .text._ZN4uart5printEPKc
-                0x00000000000007ca       0x36 build//uart.o
-                0x00000000000007ca                uart::print(char const*)
+                0x00000000000008e2       0x36 build//uart.o
+                0x00000000000008e2                uart::print(char const*)
  .text._ZN4uart16interruptHandlerEv
-                0x0000000000000800      0x1cc build//uart.o
-                0x0000000000000800                uart::interruptHandler()
+                0x0000000000000918      0x1cc build//uart.o
+                0x0000000000000918                uart::interruptHandler()
  .text.vector_handler
-                0x00000000000009cc       0x36 build//startup_ch32v00x.o
-                0x00000000000009cc                NMI_Handler
-                0x00000000000009d0                SysTick_Handler
-                0x00000000000009d2                SW_Handler
-                0x00000000000009d4                WWDG_IRQHandler
-                0x00000000000009d6                PVD_IRQHandler
-                0x00000000000009d8                FLASH_IRQHandler
-                0x00000000000009da                RCC_IRQHandler
-                0x00000000000009de                AWU_IRQHandler
-                0x00000000000009e0                DMA1_Channel1_IRQHandler
-                0x00000000000009e2                DMA1_Channel2_IRQHandler
-                0x00000000000009e4                DMA1_Channel3_IRQHandler
-                0x00000000000009e6                DMA1_Channel4_IRQHandler
-                0x00000000000009e8                DMA1_Channel5_IRQHandler
-                0x00000000000009ea                DMA1_Channel6_IRQHandler
-                0x00000000000009ec                DMA1_Channel7_IRQHandler
-                0x00000000000009ee                ADC1_IRQHandler
-                0x00000000000009f0                I2C1_EV_IRQHandler
-                0x00000000000009f2                I2C1_ER_IRQHandler
-                0x00000000000009f6                SPI1_IRQHandler
-                0x00000000000009f8                TIM1_BRK_IRQHandler
-                0x00000000000009fa                TIM1_UP_IRQHandler
-                0x00000000000009fc                TIM1_TRG_COM_IRQHandler
-                0x00000000000009fe                TIM1_CC_IRQHandler
-                0x0000000000000a00                TIM2_IRQHandler
+                0x0000000000000ae4       0x36 build//startup_ch32v00x.o
+                0x0000000000000ae4                NMI_Handler
+                0x0000000000000ae8                SysTick_Handler
+                0x0000000000000aea                SW_Handler
+                0x0000000000000aec                WWDG_IRQHandler
+                0x0000000000000aee                PVD_IRQHandler
+                0x0000000000000af0                FLASH_IRQHandler
+                0x0000000000000af2                RCC_IRQHandler
+                0x0000000000000af6                AWU_IRQHandler
+                0x0000000000000af8                DMA1_Channel1_IRQHandler
+                0x0000000000000afa                DMA1_Channel2_IRQHandler
+                0x0000000000000afc                DMA1_Channel3_IRQHandler
+                0x0000000000000afe                DMA1_Channel4_IRQHandler
+                0x0000000000000b00                DMA1_Channel5_IRQHandler
+                0x0000000000000b02                DMA1_Channel6_IRQHandler
+                0x0000000000000b04                DMA1_Channel7_IRQHandler
+                0x0000000000000b06                ADC1_IRQHandler
+                0x0000000000000b08                I2C1_EV_IRQHandler
+                0x0000000000000b0a                I2C1_ER_IRQHandler
+                0x0000000000000b0e                SPI1_IRQHandler
+                0x0000000000000b10                TIM1_BRK_IRQHandler
+                0x0000000000000b12                TIM1_UP_IRQHandler
+                0x0000000000000b14                TIM1_TRG_COM_IRQHandler
+                0x0000000000000b16                TIM1_CC_IRQHandler
+                0x0000000000000b18                TIM2_IRQHandler
  .text.handle_reset
-                0x0000000000000a02       0x7e build//startup_ch32v00x.o
-                0x0000000000000a02                handle_reset
+                0x0000000000000b1a       0x7e build//startup_ch32v00x.o
+                0x0000000000000b1a                handle_reset
  .text.__libc_init_array
-                0x0000000000000a80       0x72 /opt/MRS_toolchain/bin/../lib/gcc/riscv-wch-elf/12.2.0/../../../../riscv-wch-elf/lib/rv32ec/ilp32e/libc_nano.a(lib_a-init.o)
-                0x0000000000000a80                __libc_init_array
- .text.strlen   0x0000000000000af2       0x12 /opt/MRS_toolchain/bin/../lib/gcc/riscv-wch-elf/12.2.0/../../../../riscv-wch-elf/lib/rv32ec/ilp32e/libc_nano.a(lib_a-strlen.o)
-                0x0000000000000af2                strlen
+                0x0000000000000b98       0x72 /opt/MRS_toolchain/bin/../lib/gcc/riscv-wch-elf/12.2.0/../../../../riscv-wch-elf/lib/rv32ec/ilp32e/libc_nano.a(lib_a-init.o)
+                0x0000000000000b98                __libc_init_array
+ .text.strlen   0x0000000000000c0a       0x12 /opt/MRS_toolchain/bin/../lib/gcc/riscv-wch-elf/12.2.0/../../../../riscv-wch-elf/lib/rv32ec/ilp32e/libc_nano.a(lib_a-strlen.o)
+                0x0000000000000c0a                strlen
  *(.rodata)
  *(.rodata*)
- *fill*         0x0000000000000b04        0x0 
+ *fill*         0x0000000000000c1c        0x0 
  .rodata.main.str1.4
-                0x0000000000000b04       0x3e build//main.o
- *fill*         0x0000000000000b42        0x2 
- .rodata.main   0x0000000000000b44       0x14 build//main.o
+                0x0000000000000c1c       0x3e build//main.o
+ *fill*         0x0000000000000c5a        0x2 
+ .rodata.main   0x0000000000000c5c       0x14 build//main.o
  .rodata.EXTI7_0_IRQHandler.str1.4
-                0x0000000000000b58       0x29 build//main.o
+                0x0000000000000c70       0x29 build//main.o
  *(.gnu.linkonce.t.*)
-                0x0000000000000b84                . = ALIGN (0x4)
- *fill*         0x0000000000000b81        0x3 
+                0x0000000000000c9c                . = ALIGN (0x4)
+ *fill*         0x0000000000000c99        0x3 
 
-.rela.dyn       0x0000000000000b84        0x0
- .rela.init     0x0000000000000b84        0x0 build//main.o
+.rela.dyn       0x0000000000000c9c        0x0
+ .rela.init     0x0000000000000c9c        0x0 build//main.o
  .rela.text.handle_reset
-                0x0000000000000b84        0x0 build//main.o
+                0x0000000000000c9c        0x0 build//main.o
  .rela.text.__libc_init_array
-                0x0000000000000b84        0x0 build//main.o
+                0x0000000000000c9c        0x0 build//main.o
 
-.fini           0x0000000000000b84        0x0
+.fini           0x0000000000000c9c        0x0
  *(SORT_NONE(.fini))
-                0x0000000000000b84                . = ALIGN (0x4)
+                0x0000000000000c9c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x0000000000000b84        0x0
-                0x0000000000000b84                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000000000c9c        0x0
+                0x0000000000000c9c                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x0000000000000b84                PROVIDE (__preinit_array_end = .)
+                0x0000000000000c9c                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000000000b84        0x4
-                0x0000000000000b84                PROVIDE (__init_array_start = .)
+.init_array     0x0000000000000c9c        0x4
+                0x0000000000000c9c                PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
- .init_array    0x0000000000000b84        0x4 build//main.o
-                0x0000000000000b88                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000000000c9c        0x4 build//main.o
+                0x0000000000000ca0                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000000b88        0x0
+.fini_array     0x0000000000000ca0        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -304,15 +305,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000000b88
+.dalign         0x0000000020000000        0x0 load address 0x0000000000000ca0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000000b88        0x0
-                0x0000000000000b88                . = ALIGN (0x4)
-                0x0000000000000b88                PROVIDE (_data_lma = .)
+.dlalign        0x0000000000000ca0        0x0
+                0x0000000000000ca0                . = ALIGN (0x4)
+                0x0000000000000ca0                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000       0x60 load address 0x0000000000000b88
+.data           0x0000000020000000       0x60 load address 0x0000000000000ca0
                 0x0000000020000000                . = ALIGN (0x4)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -353,7 +354,7 @@ END GROUP
                 0x0000000020000060                . = ALIGN (0x4)
                 0x0000000020000060                PROVIDE (_edata = .)
 
-.bss            0x0000000020000060       0xe8 load address 0x0000000000000be8
+.bss            0x0000000020000060       0xe8 load address 0x0000000000000d00
                 0x0000000020000060                . = ALIGN (0x4)
                 0x0000000020000060                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -386,24 +387,24 @@ END GROUP
                 0x0000000020000800                PROVIDE (_eusrstack = .)
 OUTPUT(build//AutoWatering.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x1d22
- .debug_info    0x0000000000000000     0x1437 build//main.o
- .debug_info    0x0000000000001437      0x2d5 build//GPIO.o
- .debug_info    0x000000000000170c      0x5f3 build//uart.o
- .debug_info    0x0000000000001cff       0x23 build//startup_ch32v00x.o
+.debug_info     0x0000000000000000     0x1e5f
+ .debug_info    0x0000000000000000     0x1574 build//main.o
+ .debug_info    0x0000000000001574      0x2d5 build//GPIO.o
+ .debug_info    0x0000000000001849      0x5f3 build//uart.o
+ .debug_info    0x0000000000001e3c       0x23 build//startup_ch32v00x.o
 
-.debug_abbrev   0x0000000000000000      0x85a
- .debug_abbrev  0x0000000000000000      0x4c5 build//main.o
- .debug_abbrev  0x00000000000004c5       0xce build//GPIO.o
- .debug_abbrev  0x0000000000000593      0x2b5 build//uart.o
- .debug_abbrev  0x0000000000000848       0x12 build//startup_ch32v00x.o
+.debug_abbrev   0x0000000000000000      0x8aa
+ .debug_abbrev  0x0000000000000000      0x515 build//main.o
+ .debug_abbrev  0x0000000000000515       0xce build//GPIO.o
+ .debug_abbrev  0x00000000000005e3      0x2b5 build//uart.o
+ .debug_abbrev  0x0000000000000898       0x12 build//startup_ch32v00x.o
 
 .debug_loclists
-                0x0000000000000000      0x975
+                0x0000000000000000      0x9ee
  .debug_loclists
-                0x0000000000000000      0x62b build//main.o
+                0x0000000000000000      0x6a4 build//main.o
  .debug_loclists
-                0x000000000000062b      0x34a build//uart.o
+                0x00000000000006a4      0x34a build//uart.o
 
 .debug_aranges  0x0000000000000000      0x150
  .debug_aranges
@@ -416,30 +417,30 @@ OUTPUT(build//AutoWatering.elf elf32-littleriscv)
                 0x0000000000000120       0x30 build//startup_ch32v00x.o
 
 .debug_rnglists
-                0x0000000000000000      0x199
+                0x0000000000000000      0x1ac
  .debug_rnglists
-                0x0000000000000000       0xcd build//main.o
+                0x0000000000000000       0xe0 build//main.o
  .debug_rnglists
-                0x00000000000000cd       0x43 build//GPIO.o
+                0x00000000000000e0       0x43 build//GPIO.o
  .debug_rnglists
-                0x0000000000000110       0x68 build//uart.o
+                0x0000000000000123       0x68 build//uart.o
  .debug_rnglists
-                0x0000000000000178       0x21 build//startup_ch32v00x.o
+                0x000000000000018b       0x21 build//startup_ch32v00x.o
 
-.debug_line     0x0000000000000000     0x2020
- .debug_line    0x0000000000000000     0x1292 build//main.o
- .debug_line    0x0000000000001292      0x200 build//GPIO.o
- .debug_line    0x0000000000001492      0x9de build//uart.o
- .debug_line    0x0000000000001e70      0x1b0 build//startup_ch32v00x.o
+.debug_line     0x0000000000000000     0x23cf
+ .debug_line    0x0000000000000000     0x1641 build//main.o
+ .debug_line    0x0000000000001641      0x200 build//GPIO.o
+ .debug_line    0x0000000000001841      0x9de build//uart.o
+ .debug_line    0x000000000000221f      0x1b0 build//startup_ch32v00x.o
 
-.debug_str      0x0000000000000000      0xa84
- .debug_str     0x0000000000000000      0x9e1 build//main.o
-                                        0xaff (size before relaxing)
- .debug_str     0x00000000000009e1       0x11 build//GPIO.o
+.debug_str      0x0000000000000000      0xabe
+ .debug_str     0x0000000000000000      0xa1b build//main.o
+                                        0xb5a (size before relaxing)
+ .debug_str     0x0000000000000a1b       0x11 build//GPIO.o
                                         0x2b7 (size before relaxing)
- .debug_str     0x00000000000009f2       0x48 build//uart.o
+ .debug_str     0x0000000000000a2c       0x48 build//uart.o
                                         0x3d5 (size before relaxing)
- .debug_str     0x0000000000000a3a       0x4a build//startup_ch32v00x.o
+ .debug_str     0x0000000000000a74       0x4a build//startup_ch32v00x.o
 
 .debug_line_str
                 0x0000000000000000      0x122

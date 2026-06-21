@@ -27,11 +27,12 @@ enum awtr_state_t {
 volatile awtr_state_t awtr_state = click;
 uint8_t sens_val = 0;
 uint8_t sens_val_border = 50;
+#define BORDER ((uint32_t*)0x08003FC0)
 
 uart uart1(USART1, UART_BAUDRATE, F_HBCLK);
 uint8_t msg_click_dry[] = "Ground is dry: XXX\n";
 uint8_t msg_click_wet[] = "Ground is wet: XXX\n";
-uint8_t msg_hold[] = "New sens border: XXX\n";
+uint8_t msg_hold[] = "(X) sens border: XXX\n";
 uint8_t msg_lhold[] = "Sensor value: XXX\n";
 
 /* Program */
@@ -45,11 +46,44 @@ void delayT(uint32_t val) {       // [val] ~= 0.042 sec
 	return;
 }
 
-uint8_t ob_get() {
-	return 0;
+uint8_t flash_get() {
+	return *BORDER;
 }
-void ob_set(uint8_t data) {
-	return;
+uint8_t flash_save(uint8_t data) {
+	__disable_irq();
+	FLASH->KEYR = 0x45670123;
+	FLASH->KEYR = 0xCDEF89AB;
+	if(FLASH->CTLR & FLASH_CTLR_LOCK) {
+		return 1;
+	}
+	FLASH->MODEKEYR = 0x45670123;
+	FLASH->MODEKEYR = 0xCDEF89AB;
+	if(FLASH->CTLR & FLASH_CTLR_FLOCK) {
+		return 1;
+	}
+
+	FLASH->CTLR |= FLASH_CTLR_PAGE_ER;
+	FLASH->ADDR = 0x08003FC0;
+	FLASH->CTLR |= FLASH_CTLR_STRT;
+	while(FLASH->STATR & FLASH_STATR_BSY) {;}
+	FLASH->CTLR &= ~(FLASH_CTLR_PAGE_ER);
+
+	FLASH->CTLR |= FLASH_CTLR_PAGE_PG;
+	FLASH->CTLR |= FLASH_CTLR_BUF_RST;
+	while(FLASH->STATR & FLASH_STATR_BSY) {;}
+	*BORDER = (uint32_t)data;
+	FLASH->CTLR |= FLASH_CTLR_BUF_LOAD;
+	while(FLASH->STATR & FLASH_STATR_BSY) {;}
+	FLASH->ADDR = 0x08003FC0;
+	FLASH->CTLR |= FLASH_CTLR_STRT;
+	while(FLASH->STATR & FLASH_STATR_BSY) {;}
+	FLASH->CTLR &= ~(FLASH_CTLR_PAGE_PG);
+	FLASH->CTLR |= FLASH_CTLR_LOCK;
+	if(FLASH->STATR & FLASH_STATR_WRPRTERR) {
+		return 1;
+	}
+	__enable_irq();
+	return 0;
 }
 
 extern "C"{
@@ -109,6 +143,7 @@ void SystemInit() {
 
 int main(void)
 {
+	uint8_t tmp;
 	NVIC_EnableIRQ(SysTick_IRQn);
 	NVIC_EnableIRQ(USART1_IRQn);
 	NVIC_EnableIRQ(EXTI7_0_IRQn);
@@ -117,7 +152,7 @@ int main(void)
 	__enable_irq();
 
 	uart1.print("UART is work!!! \n");
-	sens_val_border = ob_get(); 
+	sens_val_border = flash_get(); 
 	
 	while(1) {
 		switch(awtr_state) {
@@ -155,8 +190,10 @@ int main(void)
 			break;
 		case hold:
 			sens_val_border = sens_get();
-			ob_set(sens_val_border);
+			tmp = flash_save(sens_val_border);
+			sens_val_border = flash_get();
 			led_on();
+			intToASCII(tmp, msg_hold + 1, 1);
 			intToASCII(sens_val_border, msg_hold + 17, 3);
 			uart1.send(msg_hold, sizeof(msg_hold) - 1);
 			delayT(MS_TO_TICKS(10));

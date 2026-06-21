@@ -144,8 +144,8 @@ typedef struct
 {
     __IO uint16_t RDPR;
     __IO uint16_t USER;
-    __IO uint16_t Data0;
-    __IO uint16_t Data1;
+    __IO uint16_t DATA0;
+    __IO uint16_t DATA1;
     __IO uint16_t WRPR0;
     __IO uint16_t WRPR1;
 } OB_TypeDef;
@@ -1128,65 +1128,83 @@ typedef struct
 #define FLASH_OBKEYR_OBKEYR                     ((uint32_t)0xFFFFFFFF) /* Option Byte Key */
 
 /******************  Bit definition for FLASH_STATR register  *******************/
-#define FLASH_STATR_BSY                         ((uint8_t)0x01) /* Busy */
-#define FLASH_STATR_WRPRTERR                    ((uint8_t)0x10) /* Write Protection Error */
-#define FLASH_STATR_EOP                         ((uint8_t)0x20) /* End of operation */
+#define FLASH_STATR_BSY                         ((uint32_t)0x00000001) /* Busy */
+#define FLASH_STATR_WRPRTERR                    ((uint32_t)0x00000010) /* Write Protection Error */
+#define FLASH_STATR_EOP                         ((uint32_t)0x00000020) /* End of operation */
+#define FLASH_STATR_MODE                        ((uint32_t)0x00004000) /* User area and BOOT area */
+#define FLASH_STATR_LOCK                        ((uint32_t)0x00008000) /* BOOT Lock */
 
 /*******************  Bit definition for FLASH_CTLR register  *******************/
-#define FLASH_CTLR_PG                           ((uint16_t)0x0001)     /* Programming */
-#define FLASH_CTLR_PER                          ((uint16_t)0x0002)     /* Page Erase 1KByte*/
-#define FLASH_CTLR_MER                          ((uint16_t)0x0004)     /* Mass Erase */
-#define FLASH_CTLR_OPTPG                        ((uint16_t)0x0010)     /* Option Byte Programming */
-#define FLASH_CTLR_OPTER                        ((uint16_t)0x0020)     /* Option Byte Erase */
-#define FLASH_CTLR_STRT                         ((uint16_t)0x0040)     /* Start */
-#define FLASH_CTLR_LOCK                         ((uint16_t)0x0080)     /* Lock */
-#define FLASH_CTLR_OPTWRE                       ((uint16_t)0x0200)     /* Option Bytes Write Enable */
-#define FLASH_CTLR_ERRIE                        ((uint16_t)0x0400)     /* Error Interrupt Enable */
-#define FLASH_CTLR_EOPIE                        ((uint16_t)0x1000)     /* End of operation interrupt enable */
-#define FLASH_CTLR_PAGE_PG                      ((uint16_t)0x00010000) /* Page Programming 64Byte */
-#define FLASH_CTLR_PAGE_ER                      ((uint16_t)0x00020000) /* Page Erase 64Byte */
-#define FLASH_CTLR_BUF_LOAD                     ((uint16_t)0x00040000) /* Buffer Load */
-#define FLASH_CTLR_BUF_RST                      ((uint16_t)0x00080000) /* Buffer Reset */
+#define FLASH_CTLR_PG                           ((uint32_t)0x00000001)     /* Programming */
+#define FLASH_CTLR_PER                          ((uint32_t)0x00000002)     /* Page Erase 1KByte*/
+#define FLASH_CTLR_MER                          ((uint32_t)0x00000004)     /* Mass Erase */
+#define FLASH_CTLR_OPTPG                        ((uint32_t)0x00000010)     /* Option Byte Programming */
+#define FLASH_CTLR_OPTER                        ((uint32_t)0x00000020)     /* Option Byte Erase */
+#define FLASH_CTLR_STRT                         ((uint32_t)0x00000040)     /* Start */
+#define FLASH_CTLR_LOCK                         ((uint32_t)0x00000080)     /* Lock */
+#define FLASH_CTLR_OPTWRE                       ((uint32_t)0x00000200)     /* Option Bytes Write Enable */
+#define FLASH_CTLR_ERRIE                        ((uint32_t)0x00000400)     /* Error Interrupt Enable */
+#define FLASH_CTLR_EOPIE                        ((uint32_t)0x00001000)     /* End of operation interrupt enable */
+#define FLASH_CTLR_FLOCK                        ((uint32_t)0x00008000) /* Fast programming lock */
+#define FLASH_CTLR_PAGE_PG                      ((uint32_t)0x00010000) /* Page Programming 64Byte */
+#define FLASH_CTLR_PAGE_ER                      ((uint32_t)0x00020000) /* Page Erase 64Byte */
+#define FLASH_CTLR_BUF_LOAD                     ((uint32_t)0x00040000) /* Buffer Load */
+#define FLASH_CTLR_BUF_RST                      ((uint32_t)0x00080000) /* Buffer Reset */
 
 /*******************  Bit definition for FLASH_ADDR register  *******************/
 #define FLASH_ADDR_FAR                          ((uint32_t)0xFFFFFFFF) /* Flash Address */
 
 /******************  Bit definition for FLASH_OBR register  *******************/
-#define FLASH_OBR_OPTERR                        ((uint16_t)0x0001) /* Option Byte Error */
-#define FLASH_OBR_RDPRT                         ((uint16_t)0x0002) /* Read protection */
+#define FLASH_OBR_OPTERR                        ((uint32_t)0x00000001) /* Option Byte Error */
+#define FLASH_OBR_RDPRT                         ((uint32_t)0x00000002) /* Read protection */
 
-#define FLASH_OBR_USER                          ((uint16_t)0x03FC) /* User Option Bytes */
-#define FLASH_OBR_WDG_SW                        ((uint16_t)0x0004) /* WDG_SW */
-#define FLASH_OBR_nRST_STOP                     ((uint16_t)0x0008) /* nRST_STOP */
-#define FLASH_OBR_nRST_STDBY                    ((uint16_t)0x0010) /* nRST_STDBY */
-#define FLASH_OBR_RST_MODE                      ((uint16_t)0x0060) /* RST_MODE */
+#define FLASH_OBR_USER                          ((uint32_t)0x000003FC) /* User Option Bytes */
+#define FLASH_OBR_WDG_SW                        ((uint32_t)0x00000004) /* WDG_SW */
+// #define FLASH_OBR_nRST_STOP                     ((uint32_t)0x00000008) /* nRST_STOP */
+#define FLASH_OBR_nRST_STDBY                    ((uint32_t)0x00000010) /* nRST_STDBY */
+#define FLASH_OBR_RST_MODE                      ((uint32_t)0x00000060) /* RST_MODE */
+#define FLASH_OBR_STATR_MODE                    ((uint32_t)0x00000080) /* STATR_MODE */
+#define FLASH_OBR_DATA0                         ((uint32_t)0x0003FC00) /* DATA0 */
+#define FLASH_OBR_DATA1                         ((uint32_t)0x03FC0000) /* DATA1 */
 
 /******************  Bit definition for FLASH_WPR register  ******************/
 #define FLASH_WPR_WRP                           ((uint32_t)0xFFFFFFFF) /* Write Protect */
 
-/******************  Bit definition for FLASH_RDPR register  *******************/
-#define FLASH_RDPR_RDPR                         ((uint32_t)0x000000FF) /* Read protection option byte */
-#define FLASH_RDPR_nRDPR                        ((uint32_t)0x0000FF00) /* Read protection complemented option byte */
+/******************  Bit definition for OB_RDPR register  *******************/
+#define OB_RDPR_RDPR                         ((uint16_t)0x00FF) /* Read protection option byte */
+#define OB_RDPR_nRDPR                        ((uint16_t)0xFF00) /* Read protection complemented option byte */
 
-/******************  Bit definition for FLASH_USER register  ******************/
-#define FLASH_USER_USER                         ((uint32_t)0x00FF0000) /* User option byte */
-#define FLASH_USER_nUSER                        ((uint32_t)0xFF000000) /* User complemented option byte */
+/******************  Bit definition for OB_USER register  ******************/
+#define OB_USER_USER                         ((uint16_t)0x00FF) /* User option byte */
+#define OB_USER_nUSER                        ((uint16_t)0xFF00) /* User complemented option byte */
 
-/******************  Bit definition for FLASH_Data0 register  *****************/
-#define FLASH_Data0_Data0                       ((uint32_t)0x000000FF) /* User data storage option byte */
-#define FLASH_Data0_nData0                      ((uint32_t)0x0000FF00) /* User data storage complemented option byte */
+#define OB_USER_WDG_SW                        ((uint16_t)0x00000001) /* WDG_SW */
+// #define OB_USER_nRST_STOP                     ((uint16_t)0x00000002) /* nRST_STOP */
+#define OB_USER_nRST_STDBY                    ((uint16_t)0x00000004) /* nRST_STDBY */
+#define OB_USER_RST_MODE_0                    ((uint16_t)0x00000008) /* RST_MODE */
+#define OB_USER_RST_MODE_1                    ((uint16_t)0x00000010) /* RST_MODE */
+#define OB_USER_STATR_MODE                    ((uint16_t)0x00000020) /* STATR_MODE */
 
-/******************  Bit definition for FLASH_Data1 register  *****************/
-#define FLASH_Data1_Data1                       ((uint32_t)0x00FF0000) /* User data storage option byte */
-#define FLASH_Data1_nData1                      ((uint32_t)0xFF000000) /* User data storage complemented option byte */
+#define OB_USER_RST_MODE_128U                 ((uint16_t)0x00000000) /* RST_MODE */
+#define OB_USER_RST_MODE_1M                   ((uint16_t)0x00000008) /* RST_MODE */
+#define OB_USER_RST_MODE_12M                  ((uint16_t)0x00000010) /* RST_MODE */
+#define OB_USER_RST_MODE_NONE                 ((uint16_t)0x00000018) /* RST_MODE */
 
-/******************  Bit definition for FLASH_WRPR0 register  ******************/
-#define FLASH_WRPR0_WRPR0                       ((uint32_t)0x000000FF) /* Flash memory write protection option bytes */
-#define FLASH_WRPR0_nWRPR0                      ((uint32_t)0x0000FF00) /* Flash memory write protection complemented option bytes */
+/******************  Bit definition for OB_Data0 register  *****************/
+#define OB_Data0_Data0                       ((uint16_t)0x00FF) /* User data storage option byte */
+#define OB_Data0_nData0                      ((uint16_t)0xFF00) /* User data storage complemented option byte */
 
-/******************  Bit definition for FLASH_WRPR1 register  ******************/
-#define FLASH_WRPR1_WRPR1                       ((uint32_t)0x00FF0000) /* Flash memory write protection option bytes */
-#define FLASH_WRPR1_nWRPR1                      ((uint32_t)0xFF000000) /* Flash memory write protection complemented option bytes */
+/******************  Bit definition for OB_Data1 register  *****************/
+#define OB_Data1_Data1                       ((uint16_t)0x00FF) /* User data storage option byte */
+#define OB_Data1_nData1                      ((uint16_t)0xFF00) /* User data storage complemented option byte */
+
+/******************  Bit definition for OB_WRPR0 register  ******************/
+#define OB_WRPR0_WRPR0                       ((uint16_t)0x00FF) /* Flash memory write protection option bytes */
+#define OB_WRPR0_nWRPR0                      ((uint16_t)0xFF00) /* Flash memory write protection complemented option bytes */
+
+/******************  Bit definition for OB_WRPR1 register  ******************/
+#define OB_WRPR1_WRPR1                       ((uint16_t)0x00FF) /* Flash memory write protection option bytes */
+#define OB_WRPR1_nWRPR1                      ((uint16_t)0xFF00) /* Flash memory write protection complemented option bytes */
 
 
 /******************************************************************************/

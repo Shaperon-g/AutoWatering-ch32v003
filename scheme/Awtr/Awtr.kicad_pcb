@@ -38,7 +38,7 @@
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(layerselection 0x00000000_00000000_55555555_55555570)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -70,11 +70,11 @@
 			(sketchdnponfab yes)
 			(crossoutdnponfab yes)
 			(subtractmaskfromsilk no)
-			(outputformat 1)
-			(mirror no)
-			(drillshape 1)
+			(outputformat 4)
+			(mirror yes)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "PDFS/")
 		)
 	)
 	(net 0 "")
@@ -1896,17 +1896,6 @@
 			(layer "F.Fab")
 			(uuid "f6a10716-8fe7-42aa-aa9f-38b408cb2ebe")
 		)
-		(fp_text user "REF**"
-			(at 0 -4.064 0)
-			(layer "F.SilkS")
-			(uuid "d5e2ffae-c781-4868-9ac8-7b504af8ae7e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(fp_text user "${REFERENCE}"
 			(at 0.254 0 0)
 			(layer "F.Fab")
@@ -2524,7 +2513,7 @@
 		(descr "JST NV series connector, B02P-NV (http://www.jst-mfg.com/product/pdf/eng/eNV.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST NV vertical")
 		(property "Reference" "J3"
-			(at 2.5 -4.9 0)
+			(at 2.5 2.466 0)
 			(layer "F.SilkS")
 			(uuid "14901488-f582-458c-b5c8-c1617154ba97")
 			(effects
