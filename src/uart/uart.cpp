@@ -44,10 +44,7 @@ bool uart::print(const char* str)
 
 void uart::sync(void)
 {
-    while(tx_posS != tx_posE) {
-        if(!(usart->CTLR1 & USART_CTLR1_TXEIE))
-            return;
-    }
+    while(!(usart->STATR & USART_STATR_TC) || tx_posS != tx_posE) {;}
     return;
 }
     

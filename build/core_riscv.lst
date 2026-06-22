@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cccnvUES.s 			page 1
+GAS LISTING /tmp/ccEU5Tpo.s 			page 1
 
 
    1              		.file	"core_riscv.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
   40:src/core/core_riscv.c **** uint32_t __get_MSTATUS(void)
   41:src/core/core_riscv.c **** {
   17              		.loc 1 41 1
-GAS LISTING /tmp/cccnvUES.s 			page 2
+GAS LISTING /tmp/ccEU5Tpo.s 			page 2
 
 
   18              		.cfi_startproc
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
   57              	__get_MISA:
   58              	.LFB2:
   61:src/core/core_riscv.c **** 
-GAS LISTING /tmp/cccnvUES.s 			page 3
+GAS LISTING /tmp/ccEU5Tpo.s 			page 3
 
 
   62:src/core/core_riscv.c **** /*********************************************************************
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
   87              		csrw misa, a0
   88              	# 0 "" 2
   89              		.loc 1 89 1 is_stmt 0
-GAS LISTING /tmp/cccnvUES.s 			page 4
+GAS LISTING /tmp/ccEU5Tpo.s 			page 4
 
 
   90              	 #NO_APP
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  115:src/core/core_riscv.c **** void __set_MTVEC(uint32_t value)
  116:src/core/core_riscv.c **** {
  123              		.loc 1 116 1 is_stmt 1
-GAS LISTING /tmp/cccnvUES.s 			page 5
+GAS LISTING /tmp/ccEU5Tpo.s 			page 5
 
 
  124              		.cfi_startproc
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  134:src/core/core_riscv.c **** 
  135:src/core/core_riscv.c **** /*********************************************************************
  136:src/core/core_riscv.c ****  * @fn      __set_MSCRATCH
-GAS LISTING /tmp/cccnvUES.s 			page 6
+GAS LISTING /tmp/ccEU5Tpo.s 			page 6
 
 
  137:src/core/core_riscv.c ****  *
@@ -358,7 +358,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  195              		.loc 1 162 1 is_stmt 0
  196              	 #NO_APP
  197 0004 8280     		ret
-GAS LISTING /tmp/cccnvUES.s 			page 7
+GAS LISTING /tmp/ccEU5Tpo.s 			page 7
 
 
  198              		.cfi_endproc
@@ -418,7 +418,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  231              	 #APP
  232              	# 187 "src/core/core_riscv.c" 1
  188              	    return (result);
-GAS LISTING /tmp/cccnvUES.s 			page 8
+GAS LISTING /tmp/ccEU5Tpo.s 			page 8
 
 
  233              		csrr a0,mcause
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  211:src/core/core_riscv.c **** {
  269              		.loc 1 211 1 is_stmt 1
  270              		.cfi_startproc
-GAS LISTING /tmp/cccnvUES.s 			page 9
+GAS LISTING /tmp/ccEU5Tpo.s 			page 9
 
 
  212:src/core/core_riscv.c ****     uint32_t result;
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  308              		.align	1
  309              		.globl	__get_MIMPID
  311              	__get_MIMPID:
-GAS LISTING /tmp/cccnvUES.s 			page 10
+GAS LISTING /tmp/ccEU5Tpo.s 			page 10
 
 
  312              	.LFB14:
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  340              	# 259 "src/core/core_riscv.c" 1
  260              	    return (result);
  341              		csrr a0,mhartid
-GAS LISTING /tmp/cccnvUES.s 			page 11
+GAS LISTING /tmp/ccEU5Tpo.s 			page 11
 
 
  342              	# 0 "" 2
@@ -649,260 +649,260 @@ GAS LISTING /tmp/cccnvUES.s 			page 1
  374              	.Letext0:
  375              		.file 2 "/opt/MRS_toolchain/riscv-wch-elf/include/machine/_default_types.h"
  376              		.file 3 "/opt/MRS_toolchain/riscv-wch-elf/include/sys/_stdint.h"
-GAS LISTING /tmp/cccnvUES.s 			page 12
+GAS LISTING /tmp/ccEU5Tpo.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 core_riscv.c
-     /tmp/cccnvUES.s:14     .text.__get_MSTATUS:0000000000000000 __get_MSTATUS
-     /tmp/cccnvUES.s:18     .text.__get_MSTATUS:0000000000000000 .L0 
-     /tmp/cccnvUES.s:19     .text.__get_MSTATUS:0000000000000000 .L0 
-     /tmp/cccnvUES.s:20     .text.__get_MSTATUS:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:14     .text.__get_MSTATUS:0000000000000000 __get_MSTATUS
+     /tmp/ccEU5Tpo.s:18     .text.__get_MSTATUS:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:19     .text.__get_MSTATUS:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:20     .text.__get_MSTATUS:0000000000000000 .L0 
 src/core/core_riscv.c:44     .text.__get_MSTATUS:0000000000000000 $x
 src/core/core_riscv.c:44     .text.__get_MSTATUS:0000000000000000 .L0 
-     /tmp/cccnvUES.s:27     .text.__get_MSTATUS:0000000000000004 .L0 
-     /tmp/cccnvUES.s:29     .text.__get_MSTATUS:0000000000000004 .L0 
-     /tmp/cccnvUES.s:30     .text.__get_MSTATUS:0000000000000006 .L0 
-     /tmp/cccnvUES.s:37     .text.__set_MSTATUS:0000000000000000 __set_MSTATUS
-     /tmp/cccnvUES.s:40     .text.__set_MSTATUS:0000000000000000 .L0 
-     /tmp/cccnvUES.s:42     .text.__set_MSTATUS:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:27     .text.__get_MSTATUS:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:29     .text.__get_MSTATUS:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:30     .text.__get_MSTATUS:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:37     .text.__set_MSTATUS:0000000000000000 __set_MSTATUS
+     /tmp/ccEU5Tpo.s:40     .text.__set_MSTATUS:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:42     .text.__set_MSTATUS:0000000000000000 .L0 
 src/core/core_riscv.c:59     .text.__set_MSTATUS:0000000000000000 $x
 src/core/core_riscv.c:59     .text.__set_MSTATUS:0000000000000000 .L0 
-     /tmp/cccnvUES.s:49     .text.__set_MSTATUS:0000000000000004 .L0 
-     /tmp/cccnvUES.s:50     .text.__set_MSTATUS:0000000000000006 .L0 
-     /tmp/cccnvUES.s:57     .text.__get_MISA:0000000000000000 __get_MISA
-     /tmp/cccnvUES.s:60     .text.__get_MISA:0000000000000000 .L0 
-     /tmp/cccnvUES.s:61     .text.__get_MISA:0000000000000000 .L0 
-     /tmp/cccnvUES.s:62     .text.__get_MISA:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:49     .text.__set_MSTATUS:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:50     .text.__set_MSTATUS:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:57     .text.__get_MISA:0000000000000000 __get_MISA
+     /tmp/ccEU5Tpo.s:60     .text.__get_MISA:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:61     .text.__get_MISA:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:62     .text.__get_MISA:0000000000000000 .L0 
 src/core/core_riscv.c:73     .text.__get_MISA:0000000000000000 $x
 src/core/core_riscv.c:73     .text.__get_MISA:0000000000000000 .L0 
-     /tmp/cccnvUES.s:69     .text.__get_MISA:0000000000000004 .L0 
-     /tmp/cccnvUES.s:71     .text.__get_MISA:0000000000000004 .L0 
-     /tmp/cccnvUES.s:72     .text.__get_MISA:0000000000000006 .L0 
-     /tmp/cccnvUES.s:79     .text.__set_MISA:0000000000000000 __set_MISA
-     /tmp/cccnvUES.s:82     .text.__set_MISA:0000000000000000 .L0 
-     /tmp/cccnvUES.s:84     .text.__set_MISA:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:69     .text.__get_MISA:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:71     .text.__get_MISA:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:72     .text.__get_MISA:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:79     .text.__set_MISA:0000000000000000 __set_MISA
+     /tmp/ccEU5Tpo.s:82     .text.__set_MISA:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:84     .text.__set_MISA:0000000000000000 .L0 
 src/core/core_riscv.c:88     .text.__set_MISA:0000000000000000 $x
 src/core/core_riscv.c:88     .text.__set_MISA:0000000000000000 .L0 
-     /tmp/cccnvUES.s:91     .text.__set_MISA:0000000000000004 .L0 
-     /tmp/cccnvUES.s:92     .text.__set_MISA:0000000000000006 .L0 
-     /tmp/cccnvUES.s:99     .text.__get_MTVEC:0000000000000000 __get_MTVEC
-     /tmp/cccnvUES.s:102    .text.__get_MTVEC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:103    .text.__get_MTVEC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:104    .text.__get_MTVEC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:91     .text.__set_MISA:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:92     .text.__set_MISA:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:99     .text.__get_MTVEC:0000000000000000 __get_MTVEC
+     /tmp/ccEU5Tpo.s:102    .text.__get_MTVEC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:103    .text.__get_MTVEC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:104    .text.__get_MTVEC:0000000000000000 .L0 
 src/core/core_riscv.c:102    .text.__get_MTVEC:0000000000000000 $x
 src/core/core_riscv.c:102    .text.__get_MTVEC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:111    .text.__get_MTVEC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:113    .text.__get_MTVEC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:114    .text.__get_MTVEC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:121    .text.__set_MTVEC:0000000000000000 __set_MTVEC
-     /tmp/cccnvUES.s:124    .text.__set_MTVEC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:126    .text.__set_MTVEC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:111    .text.__get_MTVEC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:113    .text.__get_MTVEC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:114    .text.__get_MTVEC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:121    .text.__set_MTVEC:0000000000000000 __set_MTVEC
+     /tmp/ccEU5Tpo.s:124    .text.__set_MTVEC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:126    .text.__set_MTVEC:0000000000000000 .L0 
 src/core/core_riscv.c:117    .text.__set_MTVEC:0000000000000000 $x
 src/core/core_riscv.c:117    .text.__set_MTVEC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:133    .text.__set_MTVEC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:134    .text.__set_MTVEC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:141    .text.__get_MSCRATCH:0000000000000000 __get_MSCRATCH
-     /tmp/cccnvUES.s:144    .text.__get_MSCRATCH:0000000000000000 .L0 
-     /tmp/cccnvUES.s:145    .text.__get_MSCRATCH:0000000000000000 .L0 
-     /tmp/cccnvUES.s:146    .text.__get_MSCRATCH:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:133    .text.__set_MTVEC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:134    .text.__set_MTVEC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:141    .text.__get_MSCRATCH:0000000000000000 __get_MSCRATCH
+     /tmp/ccEU5Tpo.s:144    .text.__get_MSCRATCH:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:145    .text.__get_MSCRATCH:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:146    .text.__get_MSCRATCH:0000000000000000 .L0 
 src/core/core_riscv.c:131    .text.__get_MSCRATCH:0000000000000000 $x
 src/core/core_riscv.c:131    .text.__get_MSCRATCH:0000000000000000 .L0 
-     /tmp/cccnvUES.s:153    .text.__get_MSCRATCH:0000000000000004 .L0 
-GAS LISTING /tmp/cccnvUES.s 			page 13
+     /tmp/ccEU5Tpo.s:153    .text.__get_MSCRATCH:0000000000000004 .L0 
+GAS LISTING /tmp/ccEU5Tpo.s 			page 13
 
 
-     /tmp/cccnvUES.s:155    .text.__get_MSCRATCH:0000000000000004 .L0 
-     /tmp/cccnvUES.s:156    .text.__get_MSCRATCH:0000000000000006 .L0 
-     /tmp/cccnvUES.s:163    .text.__set_MSCRATCH:0000000000000000 __set_MSCRATCH
-     /tmp/cccnvUES.s:166    .text.__set_MSCRATCH:0000000000000000 .L0 
-     /tmp/cccnvUES.s:168    .text.__set_MSCRATCH:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:155    .text.__get_MSCRATCH:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:156    .text.__get_MSCRATCH:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:163    .text.__set_MSCRATCH:0000000000000000 __set_MSCRATCH
+     /tmp/ccEU5Tpo.s:166    .text.__set_MSCRATCH:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:168    .text.__set_MSCRATCH:0000000000000000 .L0 
 src/core/core_riscv.c:146    .text.__set_MSCRATCH:0000000000000000 $x
 src/core/core_riscv.c:146    .text.__set_MSCRATCH:0000000000000000 .L0 
-     /tmp/cccnvUES.s:175    .text.__set_MSCRATCH:0000000000000004 .L0 
-     /tmp/cccnvUES.s:176    .text.__set_MSCRATCH:0000000000000006 .L0 
-     /tmp/cccnvUES.s:183    .text.__get_MEPC:0000000000000000 __get_MEPC
-     /tmp/cccnvUES.s:186    .text.__get_MEPC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:187    .text.__get_MEPC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:188    .text.__get_MEPC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:175    .text.__set_MSCRATCH:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:176    .text.__set_MSCRATCH:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:183    .text.__get_MEPC:0000000000000000 __get_MEPC
+     /tmp/ccEU5Tpo.s:186    .text.__get_MEPC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:187    .text.__get_MEPC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:188    .text.__get_MEPC:0000000000000000 .L0 
 src/core/core_riscv.c:160    .text.__get_MEPC:0000000000000000 $x
 src/core/core_riscv.c:160    .text.__get_MEPC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:195    .text.__get_MEPC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:197    .text.__get_MEPC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:198    .text.__get_MEPC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:205    .text.__set_MEPC:0000000000000000 __set_MEPC
-     /tmp/cccnvUES.s:208    .text.__set_MEPC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:210    .text.__set_MEPC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:195    .text.__get_MEPC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:197    .text.__get_MEPC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:198    .text.__get_MEPC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:205    .text.__set_MEPC:0000000000000000 __set_MEPC
+     /tmp/ccEU5Tpo.s:208    .text.__set_MEPC:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:210    .text.__set_MEPC:0000000000000000 .L0 
 src/core/core_riscv.c:173    .text.__set_MEPC:0000000000000000 $x
 src/core/core_riscv.c:173    .text.__set_MEPC:0000000000000000 .L0 
-     /tmp/cccnvUES.s:217    .text.__set_MEPC:0000000000000004 .L0 
-     /tmp/cccnvUES.s:218    .text.__set_MEPC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:225    .text.__get_MCAUSE:0000000000000000 __get_MCAUSE
-     /tmp/cccnvUES.s:228    .text.__get_MCAUSE:0000000000000000 .L0 
-     /tmp/cccnvUES.s:229    .text.__get_MCAUSE:0000000000000000 .L0 
-     /tmp/cccnvUES.s:230    .text.__get_MCAUSE:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:217    .text.__set_MEPC:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:218    .text.__set_MEPC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:225    .text.__get_MCAUSE:0000000000000000 __get_MCAUSE
+     /tmp/ccEU5Tpo.s:228    .text.__get_MCAUSE:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:229    .text.__get_MCAUSE:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:230    .text.__get_MCAUSE:0000000000000000 .L0 
 src/core/core_riscv.c:187    .text.__get_MCAUSE:0000000000000000 $x
 src/core/core_riscv.c:187    .text.__get_MCAUSE:0000000000000000 .L0 
-     /tmp/cccnvUES.s:237    .text.__get_MCAUSE:0000000000000004 .L0 
-     /tmp/cccnvUES.s:239    .text.__get_MCAUSE:0000000000000004 .L0 
-     /tmp/cccnvUES.s:240    .text.__get_MCAUSE:0000000000000006 .L0 
-     /tmp/cccnvUES.s:247    .text.__set_MCAUSE:0000000000000000 __set_MCAUSE
-     /tmp/cccnvUES.s:250    .text.__set_MCAUSE:0000000000000000 .L0 
-     /tmp/cccnvUES.s:252    .text.__set_MCAUSE:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:237    .text.__get_MCAUSE:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:239    .text.__get_MCAUSE:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:240    .text.__get_MCAUSE:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:247    .text.__set_MCAUSE:0000000000000000 __set_MCAUSE
+     /tmp/ccEU5Tpo.s:250    .text.__set_MCAUSE:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:252    .text.__set_MCAUSE:0000000000000000 .L0 
 src/core/core_riscv.c:200    .text.__set_MCAUSE:0000000000000000 $x
 src/core/core_riscv.c:200    .text.__set_MCAUSE:0000000000000000 .L0 
-     /tmp/cccnvUES.s:259    .text.__set_MCAUSE:0000000000000004 .L0 
-     /tmp/cccnvUES.s:260    .text.__set_MCAUSE:0000000000000006 .L0 
-     /tmp/cccnvUES.s:267    .text.__get_MVENDORID:0000000000000000 __get_MVENDORID
-     /tmp/cccnvUES.s:270    .text.__get_MVENDORID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:271    .text.__get_MVENDORID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:272    .text.__get_MVENDORID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:259    .text.__set_MCAUSE:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:260    .text.__set_MCAUSE:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:267    .text.__get_MVENDORID:0000000000000000 __get_MVENDORID
+     /tmp/ccEU5Tpo.s:270    .text.__get_MVENDORID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:271    .text.__get_MVENDORID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:272    .text.__get_MVENDORID:0000000000000000 .L0 
 src/core/core_riscv.c:214    .text.__get_MVENDORID:0000000000000000 $x
 src/core/core_riscv.c:214    .text.__get_MVENDORID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:279    .text.__get_MVENDORID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:281    .text.__get_MVENDORID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:282    .text.__get_MVENDORID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:289    .text.__get_MARCHID:0000000000000000 __get_MARCHID
-     /tmp/cccnvUES.s:292    .text.__get_MARCHID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:293    .text.__get_MARCHID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:294    .text.__get_MARCHID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:279    .text.__get_MVENDORID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:281    .text.__get_MVENDORID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:282    .text.__get_MVENDORID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:289    .text.__get_MARCHID:0000000000000000 __get_MARCHID
+     /tmp/ccEU5Tpo.s:292    .text.__get_MARCHID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:293    .text.__get_MARCHID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:294    .text.__get_MARCHID:0000000000000000 .L0 
 src/core/core_riscv.c:229    .text.__get_MARCHID:0000000000000000 $x
 src/core/core_riscv.c:229    .text.__get_MARCHID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:301    .text.__get_MARCHID:0000000000000004 .L0 
-GAS LISTING /tmp/cccnvUES.s 			page 14
+     /tmp/ccEU5Tpo.s:301    .text.__get_MARCHID:0000000000000004 .L0 
+GAS LISTING /tmp/ccEU5Tpo.s 			page 14
 
 
-     /tmp/cccnvUES.s:303    .text.__get_MARCHID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:304    .text.__get_MARCHID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:311    .text.__get_MIMPID:0000000000000000 __get_MIMPID
-     /tmp/cccnvUES.s:314    .text.__get_MIMPID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:315    .text.__get_MIMPID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:316    .text.__get_MIMPID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:303    .text.__get_MARCHID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:304    .text.__get_MARCHID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:311    .text.__get_MIMPID:0000000000000000 __get_MIMPID
+     /tmp/ccEU5Tpo.s:314    .text.__get_MIMPID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:315    .text.__get_MIMPID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:316    .text.__get_MIMPID:0000000000000000 .L0 
 src/core/core_riscv.c:244    .text.__get_MIMPID:0000000000000000 $x
 src/core/core_riscv.c:244    .text.__get_MIMPID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:323    .text.__get_MIMPID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:325    .text.__get_MIMPID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:326    .text.__get_MIMPID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:333    .text.__get_MHARTID:0000000000000000 __get_MHARTID
-     /tmp/cccnvUES.s:336    .text.__get_MHARTID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:337    .text.__get_MHARTID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:338    .text.__get_MHARTID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:323    .text.__get_MIMPID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:325    .text.__get_MIMPID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:326    .text.__get_MIMPID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:333    .text.__get_MHARTID:0000000000000000 __get_MHARTID
+     /tmp/ccEU5Tpo.s:336    .text.__get_MHARTID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:337    .text.__get_MHARTID:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:338    .text.__get_MHARTID:0000000000000000 .L0 
 src/core/core_riscv.c:259    .text.__get_MHARTID:0000000000000000 $x
 src/core/core_riscv.c:259    .text.__get_MHARTID:0000000000000000 .L0 
-     /tmp/cccnvUES.s:345    .text.__get_MHARTID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:347    .text.__get_MHARTID:0000000000000004 .L0 
-     /tmp/cccnvUES.s:348    .text.__get_MHARTID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:355    .text.__get_SP:0000000000000000 __get_SP
-     /tmp/cccnvUES.s:358    .text.__get_SP:0000000000000000 .L0 
-     /tmp/cccnvUES.s:359    .text.__get_SP:0000000000000000 .L0 
-     /tmp/cccnvUES.s:360    .text.__get_SP:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:345    .text.__get_MHARTID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:347    .text.__get_MHARTID:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:348    .text.__get_MHARTID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:355    .text.__get_SP:0000000000000000 __get_SP
+     /tmp/ccEU5Tpo.s:358    .text.__get_SP:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:359    .text.__get_SP:0000000000000000 .L0 
+     /tmp/ccEU5Tpo.s:360    .text.__get_SP:0000000000000000 .L0 
 src/core/core_riscv.c:274    .text.__get_SP:0000000000000000 $x
 src/core/core_riscv.c:274    .text.__get_SP:0000000000000000 .L0 
-     /tmp/cccnvUES.s:367    .text.__get_SP:0000000000000002 .L0 
-     /tmp/cccnvUES.s:369    .text.__get_SP:0000000000000002 .L0 
-     /tmp/cccnvUES.s:370    .text.__get_SP:0000000000000004 .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:0000000000000038 .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:000000000000005a .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:0000000000000063 .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:0000000000000094 .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:00000000000000c1 .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:00000000000000ce .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:00000000000000db .L0 
-     /tmp/cccnvUES.s:1127   .debug_line_str:00000000000000ec .L0 
-     /tmp/cccnvUES.s:33     .text.__get_MSTATUS:0000000000000006 .L0 
-     /tmp/cccnvUES.s:53     .text.__set_MSTATUS:0000000000000006 .L0 
-     /tmp/cccnvUES.s:75     .text.__get_MISA:0000000000000006 .L0 
-     /tmp/cccnvUES.s:95     .text.__set_MISA:0000000000000006 .L0 
-     /tmp/cccnvUES.s:117    .text.__get_MTVEC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:137    .text.__set_MTVEC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:159    .text.__get_MSCRATCH:0000000000000006 .L0 
-     /tmp/cccnvUES.s:179    .text.__set_MSCRATCH:0000000000000006 .L0 
-     /tmp/cccnvUES.s:201    .text.__get_MEPC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:221    .text.__set_MEPC:0000000000000006 .L0 
-     /tmp/cccnvUES.s:243    .text.__get_MCAUSE:0000000000000006 .L0 
-     /tmp/cccnvUES.s:263    .text.__set_MCAUSE:0000000000000006 .L0 
-     /tmp/cccnvUES.s:285    .text.__get_MVENDORID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:307    .text.__get_MARCHID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:329    .text.__get_MIMPID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:351    .text.__get_MHARTID:0000000000000006 .L0 
-     /tmp/cccnvUES.s:373    .text.__get_SP:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:367    .text.__get_SP:0000000000000002 .L0 
+     /tmp/ccEU5Tpo.s:369    .text.__get_SP:0000000000000002 .L0 
+     /tmp/ccEU5Tpo.s:370    .text.__get_SP:0000000000000004 .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:0000000000000038 .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:000000000000005a .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:0000000000000063 .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:0000000000000094 .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:00000000000000c1 .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:00000000000000ce .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:00000000000000db .L0 
+     /tmp/ccEU5Tpo.s:1127   .debug_line_str:00000000000000ec .L0 
+     /tmp/ccEU5Tpo.s:33     .text.__get_MSTATUS:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:53     .text.__set_MSTATUS:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:75     .text.__get_MISA:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:95     .text.__set_MISA:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:117    .text.__get_MTVEC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:137    .text.__set_MTVEC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:159    .text.__get_MSCRATCH:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:179    .text.__set_MSCRATCH:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:201    .text.__get_MEPC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:221    .text.__set_MEPC:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:243    .text.__get_MCAUSE:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:263    .text.__set_MCAUSE:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:285    .text.__get_MVENDORID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:307    .text.__get_MARCHID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:329    .text.__get_MIMPID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:351    .text.__get_MHARTID:0000000000000006 .L0 
+     /tmp/ccEU5Tpo.s:373    .text.__get_SP:0000000000000004 .L0 
                      .debug_frame:0000000000000000 .L0 
-     /tmp/cccnvUES.s:721    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-     /tmp/cccnvUES.s:1084   .debug_str:000000000000009a .LASF32
-GAS LISTING /tmp/cccnvUES.s 			page 15
+     /tmp/ccEU5Tpo.s:721    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccEU5Tpo.s:1084   .debug_str:000000000000009a .LASF32
+GAS LISTING /tmp/ccEU5Tpo.s 			page 15
 
 
-     /tmp/cccnvUES.s:1125   .debug_line_str:0000000000000022 .LASF0
-     /tmp/cccnvUES.s:1123   .debug_line_str:0000000000000000 .LASF1
-     /tmp/cccnvUES.s:1003   .debug_rnglists:000000000000000c .LLRL0
-     /tmp/cccnvUES.s:1058   .debug_line:0000000000000000 .Ldebug_line0
-     /tmp/cccnvUES.s:1112   .debug_str:00000000000001c0 .LASF2
-     /tmp/cccnvUES.s:1072   .debug_str:000000000000003f .LASF3
-     /tmp/cccnvUES.s:1104   .debug_str:0000000000000198 .LASF4
-     /tmp/cccnvUES.s:1080   .debug_str:0000000000000079 .LASF5
-     /tmp/cccnvUES.s:1108   .debug_str:00000000000001ab .LASF6
-     /tmp/cccnvUES.s:1086   .debug_str:000000000000011a .LASF11
-     /tmp/cccnvUES.s:1076   .debug_str:0000000000000058 .LASF7
-     /tmp/cccnvUES.s:1100   .debug_str:000000000000017a .LASF8
-     /tmp/cccnvUES.s:1092   .debug_str:0000000000000141 .LASF9
-     /tmp/cccnvUES.s:1088   .debug_str:0000000000000125 .LASF10
-     /tmp/cccnvUES.s:1106   .debug_str:00000000000001a2 .LASF12
-     /tmp/cccnvUES.s:1064   .debug_str:0000000000000011 .LASF13
-     /tmp/cccnvUES.s:356    .text.__get_SP:0000000000000000 .LFB16
-     /tmp/cccnvUES.s:371    .text.__get_SP:0000000000000004 .LFE16
-     /tmp/cccnvUES.s:1094   .debug_str:0000000000000158 .LASF15
-     /tmp/cccnvUES.s:1082   .debug_str:000000000000008c .LASF14
-     /tmp/cccnvUES.s:334    .text.__get_MHARTID:0000000000000000 .LFB15
-     /tmp/cccnvUES.s:349    .text.__get_MHARTID:0000000000000006 .LFE15
-     /tmp/cccnvUES.s:1098   .debug_str:000000000000016d .LASF16
-     /tmp/cccnvUES.s:312    .text.__get_MIMPID:0000000000000000 .LFB14
-     /tmp/cccnvUES.s:327    .text.__get_MIMPID:0000000000000006 .LFE14
-     /tmp/cccnvUES.s:1114   .debug_str:00000000000001cc .LASF17
-     /tmp/cccnvUES.s:290    .text.__get_MARCHID:0000000000000000 .LFB13
-     /tmp/cccnvUES.s:305    .text.__get_MARCHID:0000000000000006 .LFE13
-     /tmp/cccnvUES.s:1102   .debug_str:0000000000000188 .LASF18
-     /tmp/cccnvUES.s:268    .text.__get_MVENDORID:0000000000000000 .LFB12
-     /tmp/cccnvUES.s:283    .text.__get_MVENDORID:0000000000000006 .LFE12
-     /tmp/cccnvUES.s:1120   .debug_str:00000000000001f2 .LASF20
-     /tmp/cccnvUES.s:248    .text.__set_MCAUSE:0000000000000000 .LFB11
-     /tmp/cccnvUES.s:261    .text.__set_MCAUSE:0000000000000006 .LFE11
-     /tmp/cccnvUES.s:1062   .debug_str:000000000000000b .LASF22
-     /tmp/cccnvUES.s:1118   .debug_str:00000000000001e5 .LASF19
-     /tmp/cccnvUES.s:226    .text.__get_MCAUSE:0000000000000000 .LFB10
-     /tmp/cccnvUES.s:241    .text.__get_MCAUSE:0000000000000006 .LFE10
-     /tmp/cccnvUES.s:1116   .debug_str:00000000000001da .LASF21
-     /tmp/cccnvUES.s:206    .text.__set_MEPC:0000000000000000 .LFB9
-     /tmp/cccnvUES.s:219    .text.__set_MEPC:0000000000000006 .LFE9
-     /tmp/cccnvUES.s:1074   .debug_str:000000000000004d .LASF23
-     /tmp/cccnvUES.s:184    .text.__get_MEPC:0000000000000000 .LFB8
-     /tmp/cccnvUES.s:199    .text.__get_MEPC:0000000000000006 .LFE8
-     /tmp/cccnvUES.s:1090   .debug_str:0000000000000132 .LASF24
-     /tmp/cccnvUES.s:164    .text.__set_MSCRATCH:0000000000000000 .LFB7
-     /tmp/cccnvUES.s:177    .text.__set_MSCRATCH:0000000000000006 .LFE7
-     /tmp/cccnvUES.s:1078   .debug_str:000000000000006a .LASF25
-     /tmp/cccnvUES.s:142    .text.__get_MSCRATCH:0000000000000000 .LFB6
-     /tmp/cccnvUES.s:157    .text.__get_MSCRATCH:0000000000000006 .LFE6
-     /tmp/cccnvUES.s:1110   .debug_str:00000000000001b4 .LASF26
-     /tmp/cccnvUES.s:122    .text.__set_MTVEC:0000000000000000 .LFB5
-     /tmp/cccnvUES.s:135    .text.__set_MTVEC:0000000000000006 .LFE5
-     /tmp/cccnvUES.s:1068   .debug_str:0000000000000028 .LASF27
-     /tmp/cccnvUES.s:100    .text.__get_MTVEC:0000000000000000 .LFB4
-     /tmp/cccnvUES.s:115    .text.__get_MTVEC:0000000000000006 .LFE4
-     /tmp/cccnvUES.s:1060   .debug_str:0000000000000000 .LASF28
-GAS LISTING /tmp/cccnvUES.s 			page 16
+     /tmp/ccEU5Tpo.s:1125   .debug_line_str:0000000000000022 .LASF0
+     /tmp/ccEU5Tpo.s:1123   .debug_line_str:0000000000000000 .LASF1
+     /tmp/ccEU5Tpo.s:1003   .debug_rnglists:000000000000000c .LLRL0
+     /tmp/ccEU5Tpo.s:1058   .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccEU5Tpo.s:1112   .debug_str:00000000000001c0 .LASF2
+     /tmp/ccEU5Tpo.s:1072   .debug_str:000000000000003f .LASF3
+     /tmp/ccEU5Tpo.s:1104   .debug_str:0000000000000198 .LASF4
+     /tmp/ccEU5Tpo.s:1080   .debug_str:0000000000000079 .LASF5
+     /tmp/ccEU5Tpo.s:1108   .debug_str:00000000000001ab .LASF6
+     /tmp/ccEU5Tpo.s:1086   .debug_str:000000000000011a .LASF11
+     /tmp/ccEU5Tpo.s:1076   .debug_str:0000000000000058 .LASF7
+     /tmp/ccEU5Tpo.s:1100   .debug_str:000000000000017a .LASF8
+     /tmp/ccEU5Tpo.s:1092   .debug_str:0000000000000141 .LASF9
+     /tmp/ccEU5Tpo.s:1088   .debug_str:0000000000000125 .LASF10
+     /tmp/ccEU5Tpo.s:1106   .debug_str:00000000000001a2 .LASF12
+     /tmp/ccEU5Tpo.s:1064   .debug_str:0000000000000011 .LASF13
+     /tmp/ccEU5Tpo.s:356    .text.__get_SP:0000000000000000 .LFB16
+     /tmp/ccEU5Tpo.s:371    .text.__get_SP:0000000000000004 .LFE16
+     /tmp/ccEU5Tpo.s:1094   .debug_str:0000000000000158 .LASF15
+     /tmp/ccEU5Tpo.s:1082   .debug_str:000000000000008c .LASF14
+     /tmp/ccEU5Tpo.s:334    .text.__get_MHARTID:0000000000000000 .LFB15
+     /tmp/ccEU5Tpo.s:349    .text.__get_MHARTID:0000000000000006 .LFE15
+     /tmp/ccEU5Tpo.s:1098   .debug_str:000000000000016d .LASF16
+     /tmp/ccEU5Tpo.s:312    .text.__get_MIMPID:0000000000000000 .LFB14
+     /tmp/ccEU5Tpo.s:327    .text.__get_MIMPID:0000000000000006 .LFE14
+     /tmp/ccEU5Tpo.s:1114   .debug_str:00000000000001cc .LASF17
+     /tmp/ccEU5Tpo.s:290    .text.__get_MARCHID:0000000000000000 .LFB13
+     /tmp/ccEU5Tpo.s:305    .text.__get_MARCHID:0000000000000006 .LFE13
+     /tmp/ccEU5Tpo.s:1102   .debug_str:0000000000000188 .LASF18
+     /tmp/ccEU5Tpo.s:268    .text.__get_MVENDORID:0000000000000000 .LFB12
+     /tmp/ccEU5Tpo.s:283    .text.__get_MVENDORID:0000000000000006 .LFE12
+     /tmp/ccEU5Tpo.s:1120   .debug_str:00000000000001f2 .LASF20
+     /tmp/ccEU5Tpo.s:248    .text.__set_MCAUSE:0000000000000000 .LFB11
+     /tmp/ccEU5Tpo.s:261    .text.__set_MCAUSE:0000000000000006 .LFE11
+     /tmp/ccEU5Tpo.s:1062   .debug_str:000000000000000b .LASF22
+     /tmp/ccEU5Tpo.s:1118   .debug_str:00000000000001e5 .LASF19
+     /tmp/ccEU5Tpo.s:226    .text.__get_MCAUSE:0000000000000000 .LFB10
+     /tmp/ccEU5Tpo.s:241    .text.__get_MCAUSE:0000000000000006 .LFE10
+     /tmp/ccEU5Tpo.s:1116   .debug_str:00000000000001da .LASF21
+     /tmp/ccEU5Tpo.s:206    .text.__set_MEPC:0000000000000000 .LFB9
+     /tmp/ccEU5Tpo.s:219    .text.__set_MEPC:0000000000000006 .LFE9
+     /tmp/ccEU5Tpo.s:1074   .debug_str:000000000000004d .LASF23
+     /tmp/ccEU5Tpo.s:184    .text.__get_MEPC:0000000000000000 .LFB8
+     /tmp/ccEU5Tpo.s:199    .text.__get_MEPC:0000000000000006 .LFE8
+     /tmp/ccEU5Tpo.s:1090   .debug_str:0000000000000132 .LASF24
+     /tmp/ccEU5Tpo.s:164    .text.__set_MSCRATCH:0000000000000000 .LFB7
+     /tmp/ccEU5Tpo.s:177    .text.__set_MSCRATCH:0000000000000006 .LFE7
+     /tmp/ccEU5Tpo.s:1078   .debug_str:000000000000006a .LASF25
+     /tmp/ccEU5Tpo.s:142    .text.__get_MSCRATCH:0000000000000000 .LFB6
+     /tmp/ccEU5Tpo.s:157    .text.__get_MSCRATCH:0000000000000006 .LFE6
+     /tmp/ccEU5Tpo.s:1110   .debug_str:00000000000001b4 .LASF26
+     /tmp/ccEU5Tpo.s:122    .text.__set_MTVEC:0000000000000000 .LFB5
+     /tmp/ccEU5Tpo.s:135    .text.__set_MTVEC:0000000000000006 .LFE5
+     /tmp/ccEU5Tpo.s:1068   .debug_str:0000000000000028 .LASF27
+     /tmp/ccEU5Tpo.s:100    .text.__get_MTVEC:0000000000000000 .LFB4
+     /tmp/ccEU5Tpo.s:115    .text.__get_MTVEC:0000000000000006 .LFE4
+     /tmp/ccEU5Tpo.s:1060   .debug_str:0000000000000000 .LASF28
+GAS LISTING /tmp/ccEU5Tpo.s 			page 16
 
 
-     /tmp/cccnvUES.s:80     .text.__set_MISA:0000000000000000 .LFB3
-     /tmp/cccnvUES.s:93     .text.__set_MISA:0000000000000006 .LFE3
-     /tmp/cccnvUES.s:1070   .debug_str:0000000000000034 .LASF29
-     /tmp/cccnvUES.s:58     .text.__get_MISA:0000000000000000 .LFB2
-     /tmp/cccnvUES.s:73     .text.__get_MISA:0000000000000006 .LFE2
-     /tmp/cccnvUES.s:1096   .debug_str:000000000000015f .LASF30
-     /tmp/cccnvUES.s:38     .text.__set_MSTATUS:0000000000000000 .LFB1
-     /tmp/cccnvUES.s:51     .text.__set_MSTATUS:0000000000000006 .LFE1
-     /tmp/cccnvUES.s:1066   .debug_str:000000000000001a .LASF31
-     /tmp/cccnvUES.s:15     .text.__get_MSTATUS:0000000000000000 .LFB0
-     /tmp/cccnvUES.s:31     .text.__get_MSTATUS:0000000000000006 .LFE0
-     /tmp/cccnvUES.s:378    .debug_info:0000000000000000 .Ldebug_info0
+     /tmp/ccEU5Tpo.s:80     .text.__set_MISA:0000000000000000 .LFB3
+     /tmp/ccEU5Tpo.s:93     .text.__set_MISA:0000000000000006 .LFE3
+     /tmp/ccEU5Tpo.s:1070   .debug_str:0000000000000034 .LASF29
+     /tmp/ccEU5Tpo.s:58     .text.__get_MISA:0000000000000000 .LFB2
+     /tmp/ccEU5Tpo.s:73     .text.__get_MISA:0000000000000006 .LFE2
+     /tmp/ccEU5Tpo.s:1096   .debug_str:000000000000015f .LASF30
+     /tmp/ccEU5Tpo.s:38     .text.__set_MSTATUS:0000000000000000 .LFB1
+     /tmp/ccEU5Tpo.s:51     .text.__set_MSTATUS:0000000000000006 .LFE1
+     /tmp/ccEU5Tpo.s:1066   .debug_str:000000000000001a .LASF31
+     /tmp/ccEU5Tpo.s:15     .text.__get_MSTATUS:0000000000000000 .LFB0
+     /tmp/ccEU5Tpo.s:31     .text.__get_MSTATUS:0000000000000006 .LFE0
+     /tmp/ccEU5Tpo.s:378    .debug_info:0000000000000000 .Ldebug_info0
 
 NO UNDEFINED SYMBOLS

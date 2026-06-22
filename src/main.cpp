@@ -17,14 +17,13 @@
 
 /* Global Variable */
 enum awtr_state_t {
-	blink,
 	waiting,
 	click,
 	hold,
 	long_hold,
 	toSleep,
 };
-volatile awtr_state_t awtr_state = click;
+volatile awtr_state_t awtr_state;
 uint8_t sens_val = 0;
 uint8_t sens_val_border = 50;
 #define BORDER ((uint32_t*)0x08003FC0)
@@ -153,25 +152,26 @@ int main(void)
 
 	uart1.print("UART is work!!! \n");
 	sens_val_border = flash_get(); 
+	awtr_state = click;
 	
 	while(1) {
 		switch(awtr_state) {
-		case blink:
-			led_on();
-			delayT(MS_TO_TICKS(10));
-			led_off();
-			awtr_state = waiting;
-			break;
 		case waiting:
 			uint32_t cnt_prev, cnt_cur;
 			cnt_prev = SysTick->CNT;
 			cnt_cur = SysTick->CNT;
-			while(cnt_cur < cnt_prev + MS_TO_TICKS(4000) && awtr_state == waiting) {
+			while(cnt_cur < cnt_prev + MS_TO_TICKS(10000) && awtr_state == waiting) {
 				cnt_cur = SysTick->CNT;
+			}
+			if(awtr_state == waiting) {
+				awtr_state = toSleep;
 			}
 			break;
 
 		case click:
+			led_on();
+			delayT(MS_TO_TICKS(10));
+			led_off();
 			sens_val = sens_get();
 			if(sens_val > sens_val_border) {
 				__disable_irq();
@@ -189,29 +189,43 @@ int main(void)
 			awtr_state = toSleep;
 			break;
 		case hold:
+			led_on();
+			delayT(MS_TO_TICKS(10));
+			led_off();
 			sens_val_border = sens_get();
 			tmp = flash_save(sens_val_border);
 			sens_val_border = flash_get();
+			delayT(MS_TO_TICKS(200));
 			led_on();
 			intToASCII(tmp, msg_hold + 1, 1);
 			intToASCII(sens_val_border, msg_hold + 17, 3);
 			uart1.send(msg_hold, sizeof(msg_hold) - 1);
-			delayT(MS_TO_TICKS(10));
+			delayT(MS_TO_TICKS(15));
 			led_off();
 			awtr_state = toSleep;
 			break;
 		case long_hold:
 			uart1.print("Measurement cycle, click button for exit\n");
 			while(awtr_state == long_hold) {
+				led_on();
 				sens_val = sens_get();
 				intToASCII(sens_val, msg_lhold + 14, 3);
 				uart1.send(msg_lhold, sizeof(msg_lhold) - 1);
+				led_off();
 				delayT(MS_TO_TICKS(1000));
 			}
 			break;
 
 		case toSleep:
-			// uart1.sync();
+			uart1.sync();
+			uart1.print("chip fall asleep\n");
+			uart1.sync();
+			RCC->APB2PCENR &= ~(RCC_IOPARST | RCC_ADC1RST | RCC_USART1RST);
+			__WFI();
+
+			RCC->APB2PCENR |= RCC_IOPAEN | RCC_IOPCEN | RCC_IOPDEN | 
+	                  RCC_ADC1EN | RCC_USART1EN | RCC_AFIOEN;
+			uart1.print("chip wake up \\(^o^)/\n");
 			break;
 		}
 	}
@@ -229,7 +243,7 @@ __attribute((interrupt("WCH-Interrupt-fast")))
 void SysTick_IRQHandler(void) {
 	SysTick->SR = 0;
 	uart1.print("Timer update\n");
-	awtr_state = blink;
+	awtr_state = click;
 	return;
 }
 
@@ -247,8 +261,8 @@ void EXTI7_0_IRQHandler(void) {
 
 	if(btn_state_new) {
 		uart1.print("button was pressed\n");
-		awtr_state = blink;
 		wait = SysTick->CNT;
+		awtr_state = waiting;
 	}
 	else {
 		uart1.print("button was released\n");
