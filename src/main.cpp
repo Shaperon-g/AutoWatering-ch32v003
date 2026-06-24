@@ -1,6 +1,10 @@
 /* configurations */
+#ifndef AWTR_UPDATE_TIME
 #define AWTR_UPDATE_TIME 12   // [1 - 40 hours]
-#define AWTR_WATERING_TIME 2000   // [ms]
+#endif
+#ifndef AWTR_WATERING_DUR
+#define AWTR_WATERING_DUR 2000   // [ms]
+#endif
 
 /* clock preferences. Don't change thoughtlessly! */
 #define F_HBCLK 187500
@@ -176,7 +180,7 @@ int main(void)
 			if(sens_val > sens_val_border) {
 				__disable_irq();
 				pump_on();
-				delayT(MS_TO_TICKS(AWTR_WATERING_TIME));
+				delayT(MS_TO_TICKS(AWTR_WATERING_DUR));
 				pump_off();
 				__enable_irq();
 				intToASCII(sens_val, msg_click_dry + 15, 3);

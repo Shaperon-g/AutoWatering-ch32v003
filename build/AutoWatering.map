@@ -388,11 +388,11 @@ END GROUP
                 0x0000000020000800                PROVIDE (_eusrstack = .)
 OUTPUT(build//AutoWatering.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x1f64
- .debug_info    0x0000000000000000     0x1679 build//main.o
- .debug_info    0x0000000000001679      0x2d5 build//GPIO.o
- .debug_info    0x000000000000194e      0x5f3 build//uart.o
- .debug_info    0x0000000000001f41       0x23 build//startup_ch32v00x.o
+.debug_info     0x0000000000000000     0x1f66
+ .debug_info    0x0000000000000000     0x167b build//main.o
+ .debug_info    0x000000000000167b      0x2d5 build//GPIO.o
+ .debug_info    0x0000000000001950      0x5f3 build//uart.o
+ .debug_info    0x0000000000001f43       0x23 build//startup_ch32v00x.o
 
 .debug_abbrev   0x0000000000000000      0x8d2
  .debug_abbrev  0x0000000000000000      0x53d build//main.o

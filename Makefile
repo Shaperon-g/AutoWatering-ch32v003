@@ -1,5 +1,8 @@
 TARGET = AutoWatering
 
+UPDATE_TIME = 12 #hours
+WATERING_DURATION = 2000 #ms
+
 OPT = -O2
 FORGDB = -g
 
@@ -52,6 +55,7 @@ C_INCLUDES = $(addprefix -I, $(VPATH))
 ASFLAGS = $(CPU) $(AS_INCLUDES) $(OPT) $(FORGDB) -Wall -fdata-sections -ffunction-sections
 CFLAGS = $(CPU) $(C_INCLUDES) $(OPT) $(FORGDB) -Wall -fdata-sections -ffunction-sections
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
+CFLAGS += -DAWTR_UPDATE_TIME=$(UPDATE_TIME) -DAWTR_WATERING_DUR=$(WATERING_DURATION)
 
 
 LIBS = -lc -lm -lnosys #-nostdlib
